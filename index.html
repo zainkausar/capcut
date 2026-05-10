@@ -4736,36 +4736,48 @@ if (dlBtn) {
 /* ═══════════════════════════════════════
    SCROLL TO TOP
 ═══════════════════════════════════════ */
-(function () {
-  const btn  = document.getElementById('scrollTopBtn');
-  const ring = btn ? btn.querySelector('.stt-ring') : null;
-  if (!btn) return;
+// (function () {
+//   const btn  = document.getElementById('scrollTopBtn');
+//   const ring = btn ? btn.querySelector('.stt-ring') : null;
+//   if (!btn) return;
 
-  function update() {
-    const scrolled = window.scrollY;
-    const total    = document.documentElement.scrollHeight - window.innerHeight;
-    const pct      = total > 0 ? (scrolled / total) * 100 : 0;
+//   function update() {
+//     const scrolled = window.scrollY;
+//     const total    = document.documentElement.scrollHeight - window.innerHeight;
+//     const pct      = total > 0 ? (scrolled / total) * 100 : 0;
 
-    // Show / hide
-    btn.classList.toggle('visible', scrolled > 300);
+//     // Show / hide
+//     btn.classList.toggle('visible', scrolled > 300);
 
-    // Drive conic-gradient progress via CSS custom property
-    if (ring) ring.style.setProperty('--scroll-pct', pct.toFixed(1));
+//     // Drive conic-gradient progress via CSS custom property
+//     if (ring) ring.style.setProperty('--scroll-pct', pct.toFixed(1));
+//   }
+
+//   window.addEventListener('scroll', update, { passive: true });
+//   update(); // run once on load
+
+//   btn.addEventListener('click', function () {
+//     window.scrollTo({ top: 0, behavior: 'smooth' });
+//   });
+
+//   btn.addEventListener('keydown', function (e) {
+//     if (e.key === 'Enter' || e.key === ' ') {
+//       e.preventDefault();
+//       window.scrollTo({ top: 0, behavior: 'smooth' });
+//     }
+//   });
+// }());
+
+(function(){
+  var btn=document.getElementById('scrollTopBtn'),ring=btn?btn.querySelector('.stt-ring'):null;
+  if(!btn)return;
+  function update(){
+    var s=window.scrollY,t=document.documentElement.scrollHeight-window.innerHeight,p=t>0?(s/t)*100:0;
+    btn.classList.toggle('visible',s>300);
+    if(ring)ring.style.setProperty('--scroll-pct',p.toFixed(1));
   }
-
-  window.addEventListener('scroll', update, { passive: true });
-  update(); // run once on load
-
-  btn.addEventListener('click', function () {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-
-  btn.addEventListener('keydown', function (e) {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  });
+  window.addEventListener('scroll',update,{passive:true});update();
+  btn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
 }());
 
 /* ═══════════════════════════════════════
