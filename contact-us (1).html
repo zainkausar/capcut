@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="index, follow">
+<meta name="author" content="CapCutModIndia Editorial Team">
+<meta name="geo.region" content="IN">
+<title>Contact Us | CapCut Mod India</title>
+<meta name="description" content="Get in touch with the CapCut Mod India team. Report issues, submit DMCA notices, ask questions, or give feedback. We typically respond within 24 hours.">
+<link rel="canonical" href="https://capcutmodindia.in/contact-us.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ═══ RESET & VARIABLES ═══ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#04080f;--bg2:#080f1a;--bg3:#0c1622;
+  --border:rgba(255,255,255,0.07);--border-accent:rgba(0,240,255,0.25);
+  --cyan:#00f0ff;--cyan2:#00c8e0;--orange:#ff6b2b;--orange2:#e55a1f;
+  --green:#00d68f;--purple:#7c3aed;
+  --text:#f0f4f8;--muted:#8899aa;--muted2:#4a6070;--card:#0c1826;
+  --font-display:'Bebas Neue',sans-serif;--font-body:'Space Grotesk',sans-serif;
+  --radius:14px;--radius-sm:8px;
+}
+html{scroll-behavior:smooth;font-size:16px;overflow-x:hidden}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+button{cursor:pointer;font-family:var(--font-body)}
+.container{max-width:1140px;margin:0 auto;padding:0 20px}
+.container-sm{max-width:900px;margin:0 auto;padding:0 20px}
+.cyan{color:var(--cyan)}.orange{color:var(--orange)}.green{color:var(--green)}
+/* ═══ BUTTONS ═══ */
+.btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--cyan);color:#000;font-weight:700;font-size:16px;padding:16px 32px;border-radius:var(--radius);border:none;transition:all .25s ease;white-space:nowrap}
+.btn-primary:hover{background:var(--cyan2);transform:translateY(-2px);box-shadow:0 0 50px rgba(0,240,255,.5)}
+/* ═══ NAV ═══ */
+#nav{position:fixed;top:0;left:0;right:0;z-index:999;transition:all .3s ease;padding:16px 0}
+#nav.scrolled{background:rgba(4,8,15,.95);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:10px 0}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:1140px;margin:0 auto;padding:0 20px}
+.nav-logo{display:flex;align-items:center;gap:10px}
+.nav-logo-icon{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--cyan),var(--purple));display:flex;align-items:center;justify-content:center}
+.nav-logo-icon svg{width:20px;height:20px;fill:#fff}
+.nav-logo-text{font-family:var(--font-display);font-size:22px;letter-spacing:.05em}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-links a{font-size:14px;color:var(--muted);font-weight:500;transition:color .2s;letter-spacing:.02em}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{background:var(--cyan);color:#000;font-size:13px;font-weight:700;padding:9px 20px;border-radius:8px;transition:all .2s}
+.nav-cta:hover{background:var(--cyan2);transform:scale(1.04)}
+.nav-hamburger{display:none;background:none;border:none;width:40px;height:40px;cursor:pointer;padding:0;position:relative;z-index:1001;flex-direction:column;align-items:center;justify-content:center;gap:5px}
+.nav-hamburger .hb-line{display:block;height:2px;border-radius:2px;background:var(--text);transition:all .35s cubic-bezier(.4,0,.2,1);transform-origin:center}
+.nav-hamburger .hb-line:nth-child(1){width:22px}
+.nav-hamburger .hb-line:nth-child(2){width:14px;margin-left:-8px;opacity:.6}
+.nav-hamburger .hb-line:nth-child(3){width:18px}
+.nav-hamburger.active .hb-line:nth-child(1){width:20px;transform:translateY(7px) rotate(45deg)}
+.nav-hamburger.active .hb-line:nth-child(2){width:0;opacity:0}
+.nav-hamburger.active .hb-line:nth-child(3){width:20px;transform:translateY(-7px) rotate(-45deg)}
+.nav-mobile-overlay{display:none;position:fixed;inset:0;z-index:998;background:rgba(4,8,15,.75);backdrop-filter:blur(6px);opacity:0;transition:opacity .3s ease}
+.nav-mobile-overlay.open{opacity:1;display:block}
+.nav-mobile{visibility:hidden;position:fixed;top:0;right:0;bottom:0;z-index:999;width:min(340px,90vw);background:linear-gradient(180deg,#080f1a 0%,#04080f 100%);border-left:1px solid var(--border);transform:translateX(100%);transition:transform .38s cubic-bezier(.4,0,.2,1),visibility .38s;overflow-y:auto;display:flex;flex-direction:column;box-shadow:-20px 0 60px rgba(0,0,0,.6)}
+.nav-mobile.open{transform:translateX(0);visibility:visible}
+.nav-mobile-header{display:flex;align-items:center;justify-content:space-between;padding:22px 22px 18px;border-bottom:1px solid var(--border);background:rgba(0,240,255,.02)}
+.nav-mobile-logo{display:flex;align-items:center;gap:10px}
+.nav-mobile-logo-icon{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--cyan),var(--purple));display:flex;align-items:center;justify-content:center}
+.nav-mobile-logo-icon svg{width:18px;height:18px;fill:#fff}
+.nav-mobile-logo-text{font-family:var(--font-display);font-size:20px;letter-spacing:.05em}
+.nav-mobile-close{width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,.06);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--muted);transition:all .2s}
+.nav-mobile-close:hover{color:var(--cyan);border-color:rgba(0,240,255,.4);background:rgba(0,240,255,.08)}
+.nav-mobile-links{display:flex;flex-direction:column;padding:12px 0;flex:1}
+.nav-mobile-link{display:flex;align-items:center;gap:14px;padding:15px 22px;font-size:15px;font-weight:600;color:var(--muted);transition:all .2s;border-left:3px solid transparent;text-decoration:none;letter-spacing:.01em}
+.nav-mobile-link:hover{color:var(--text);background:rgba(255,255,255,.03);border-left-color:var(--cyan);padding-left:25px}
+.nav-mobile-link-icon{width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.04);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .2s}
+.nav-mobile-link:hover .nav-mobile-link-icon{background:rgba(0,240,255,.08);border-color:rgba(0,240,255,.25)}
+.nav-mobile-link-icon svg{width:16px;height:16px}
+.nav-mobile-link-label{flex:1}
+.nav-mobile-link-arrow{color:var(--muted2);transition:transform .2s;flex-shrink:0}
+.nav-mobile-link:hover .nav-mobile-link-arrow{transform:translateX(4px);color:var(--cyan)}
+.nav-mobile-divider{height:1px;background:var(--border);margin:8px 22px}
+.nav-mobile-footer{padding:18px 22px 32px;border-top:1px solid var(--border);background:rgba(0,240,255,.015)}
+.nav-mobile-footer .btn-primary{width:100%;justify-content:center;border-radius:12px;font-size:15px;padding:15px 20px}
+.nav-mobile-footer-trust{display:flex;justify-content:center;gap:14px;margin-top:14px;font-size:11px;color:var(--muted2)}
+.nav-mobile-footer-trust span{display:flex;align-items:center;gap:4px}
+/* ═══ FOOTER ═══ */
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:60px 0 0}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px}
+.footer-brand-logo{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.footer-desc{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:18px;max-width:280px}
+.footer-social{display:flex;gap:10px}
+.footer-social-link{width:36px;height:36px;border-radius:9px;background:rgba(255,255,255,.05);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--muted);transition:all .2s}
+.footer-social-link:hover{color:var(--cyan);border-color:var(--border-accent);background:rgba(0,240,255,.08)}
+.footer-col-title{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted2);margin-bottom:16px}
+.footer-links{display:flex;flex-direction:column;gap:10px}
+.footer-links a{font-size:13px;color:var(--muted);transition:color .2s}
+.footer-links a:hover{color:var(--cyan)}
+.footer-bottom{border-top:1px solid var(--border);padding:24px 0;display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.footer-disclaimer{font-size:11px;color:var(--muted2);line-height:1.7;max-width:700px}
+.footer-copy{font-size:12px;color:var(--muted2);text-align:right;white-space:nowrap}
+/* ═══ SCROLL-TO-TOP ═══ */
+#scrollTopBtn{position:fixed;bottom:28px;right:24px;width:50px;height:50px;border-radius:16px;background:none;border:none;cursor:pointer;z-index:900;opacity:0;visibility:hidden;transform:translateY(16px) scale(.8);transition:opacity .4s cubic-bezier(.34,1.56,.64,1),visibility .4s ease,transform .4s cubic-bezier(.34,1.56,.64,1);outline:none}
+#scrollTopBtn.visible{opacity:1;visibility:visible;transform:translateY(0) scale(1)}
+#scrollTopBtn .stt-face{position:absolute;inset:0;border-radius:16px;background:linear-gradient(145deg,rgba(0,240,255,.12) 0%,rgba(124,58,237,.1) 100%);border:1px solid rgba(0,240,255,.25);backdrop-filter:blur(12px);box-shadow:0 4px 24px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.08);transition:all .25s}
+#scrollTopBtn:hover .stt-face{border-color:rgba(0,240,255,.55);box-shadow:0 8px 32px rgba(0,0,0,.55),0 0 24px rgba(0,240,255,.2)}
+#scrollTopBtn .stt-ring{position:absolute;inset:-4px;border-radius:20px;background:conic-gradient(var(--cyan) calc(var(--scroll-pct,0) * 1%),transparent 0%);z-index:-1}
+#scrollTopBtn .stt-ring-inner{position:absolute;inset:2px;border-radius:14px;background:var(--bg2);z-index:-1}
+#scrollTopBtn svg{position:absolute;inset:0;margin:auto;width:22px;height:22px;color:var(--cyan);filter:drop-shadow(0 0 6px rgba(0,240,255,.5));transition:transform .25s cubic-bezier(.34,1.56,.64,1)}
+#scrollTopBtn:hover svg{transform:translateY(-3px)}
+/* ═══ HERO ═══ */
+.legal-hero{padding:120px 0 60px;background:radial-gradient(ellipse 70% 50% at 20% 0%,rgba(0,240,255,.05) 0%,transparent 55%),radial-gradient(ellipse 50% 40% at 80% 60%,rgba(124,58,237,.06) 0%,transparent 55%),var(--bg);border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+.legal-hero-grid{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 80% 80% at 50% 0%,black 0%,transparent 70%)}
+.legal-hero-label{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);display:block;margin-bottom:12px}
+.legal-hero-title{font-family:var(--font-display);font-size:clamp(40px,6vw,72px);line-height:1.02;letter-spacing:.02em;margin-bottom:14px}
+.legal-hero-sub{color:var(--muted);font-size:16px;max-width:580px;line-height:1.7}
+.legal-hero-meta{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:20px}
+.legal-hero-meta-item{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--muted)}
+.legal-hero-meta-item svg{width:14px;height:14px;flex-shrink:0}
+.legal-breadcrumb{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted2);margin-bottom:20px}
+.legal-breadcrumb a{color:var(--muted);transition:color .2s}
+.legal-breadcrumb a:hover{color:var(--cyan)}
+.legal-breadcrumb-sep{opacity:.4}
+/* ═══ CONTACT PAGE SPECIFIC ═══ */
+.contact-wrap{padding:60px 0 80px}
+/* 3-column quick cards */
+.contact-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:48px}
+.contact-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:22px;text-align:center;transition:border-color .2s,transform .2s}
+.contact-card:hover{transform:translateY(-3px)}
+.contact-card-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;flex-shrink:0}
+.contact-card-label{font-size:12px;font-weight:700;color:var(--muted2);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+.contact-card-link{font-size:13px;word-break:break-all}
+/* 2-column form + sidebar */
+.contact-layout{display:grid;grid-template-columns:1fr 300px;gap:32px;align-items:start}
+/* Form section */
+.contact-form-head{margin-bottom:24px}
+.contact-form-label{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan);display:block;margin-bottom:8px}
+.contact-form-title{font-family:var(--font-display);font-size:clamp(24px,4vw,38px);letter-spacing:.02em;margin-bottom:8px}
+.contact-form-sub{color:var(--muted);font-size:15px;line-height:1.6}
+.contact-form-box{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:28px}
+.contact-form{display:flex;flex-direction:column;gap:18px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-group{display:flex;flex-direction:column;gap:6px}
+.form-label{font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--muted2)}
+.form-req{color:var(--orange)}
+.form-input,.form-select,.form-textarea{background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:10px;padding:12px 16px;font-size:14px;color:var(--text);font-family:var(--font-body);width:100%;transition:border-color .2s,background .2s;outline:none;-webkit-appearance:none}
+.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:rgba(0,240,255,.4);background:rgba(0,240,255,.03)}
+.form-textarea{resize:vertical;min-height:130px;line-height:1.6}
+.form-select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%238899aa' stroke-width='2'%3E%3Cpolyline points='2,4 6,8 10,4'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px}
+.form-select option{background:#0c1826}
+.consent-row{display:flex;align-items:flex-start;gap:10px}
+.consent-row input[type=checkbox]{margin-top:3px;flex-shrink:0;accent-color:var(--cyan);width:16px;height:16px}
+.consent-label{font-size:13px;color:var(--muted);cursor:pointer;line-height:1.5}
+.consent-label a{color:var(--cyan)}
+.form-submit-btn{display:inline-flex;align-items:center;gap:10px;background:var(--cyan);color:#000;font-weight:700;font-size:15px;padding:15px 32px;border-radius:var(--radius);border:none;cursor:pointer;transition:all .25s;width:100%;justify-content:center}
+.form-submit-btn:hover{background:var(--cyan2);transform:translateY(-2px);box-shadow:0 0 40px rgba(0,240,255,.4)}
+.form-success{display:none;text-align:center;padding:28px 20px}
+.form-success-icon{width:60px;height:60px;background:rgba(0,214,143,.12);border:2px solid var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+.form-success-title{font-family:var(--font-display);font-size:28px;margin-bottom:8px}
+.form-success-sub{color:var(--muted);font-size:14px}
+/* Sidebar */
+.contact-sidebar{display:flex;flex-direction:column;gap:16px;position:sticky;top:88px}
+.sidebar-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px}
+.sidebar-card-title{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted2);margin-bottom:14px}
+.sidebar-response-row{display:flex;justify-content:space-between;align-items:center;font-size:13px;padding:8px 0}
+.sidebar-response-row+.sidebar-response-row{border-top:1px solid var(--border)}
+.sidebar-hours{font-size:13px;color:var(--muted);line-height:1.8}
+.sidebar-quicklinks{display:flex;flex-direction:column;gap:8px}
+.sidebar-quicklink{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:7px;transition:color .2s;padding:4px 0}
+.sidebar-quicklink:hover{color:var(--cyan)}
+.sidebar-quicklink svg{flex-shrink:0}
+.sidebar-cta{background:linear-gradient(135deg,rgba(0,240,255,.06),rgba(124,58,237,.06));border:1px solid rgba(0,240,255,.2)}
+.sidebar-cta .sidebar-card-title{color:var(--cyan)}
+
+/* ═══ RESPONSIVE ═══ */
+@media(max-width:900px){
+  .contact-layout{grid-template-columns:1fr}
+  .contact-sidebar{position:static}
+  .sidebar-cards-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .contact-layout .contact-sidebar{order:2}
+}
+@media(max-width:768px){
+  .nav-links{display:none}
+  .nav-hamburger{display:flex}
+  .legal-hero{padding:96px 0 44px}
+  .legal-hero-sub{font-size:15px}
+  .legal-hero-meta{gap:12px}
+  .contact-wrap{padding:36px 0 60px}
+  .contact-cards{grid-template-columns:1fr}
+  .contact-cards .contact-card{display:flex;align-items:center;gap:16px;text-align:left;padding:16px 18px}
+  .contact-card-icon{margin:0;flex-shrink:0}
+  .contact-card-info{flex:1;min-width:0}
+  .contact-card-link{word-break:break-all;font-size:12px}
+  .contact-form-box{padding:20px 16px}
+  .form-row{grid-template-columns:1fr}
+  .contact-sidebar{display:flex;flex-direction:column;gap:12px}
+  .sidebar-cards-row{grid-template-columns:1fr}
+  .contact-form-title{font-size:clamp(22px,7vw,32px)}
+  .form-submit-btn{font-size:14px;padding:14px 20px}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .footer-copy{white-space:normal;text-align:left}
+}
+@media(max-width:480px){
+  .footer-grid{grid-template-columns:1fr}
+  .legal-hero{padding:88px 0 36px}
+  .contact-form-box{padding:16px 12px}
+  .form-input,.form-select,.form-textarea{font-size:16px}/* prevent iOS zoom */
+  .contact-form-title{font-size:28px}
+  .footer-bottom{flex-direction:column;gap:12px}
+  .footer-copy{text-align:left;white-space:normal}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav id="nav" role="navigation" aria-label="Main Navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="CapCut Mod India Home">
+      <div class="nav-logo-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M15 10l-9 5V5l9 5zm0 0l4-4v8l-4-4z"/></svg>
+      </div>
+      <span class="nav-logo-text">CapCut<span class="cyan"> MOD</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#features">Features</a>
+      <a href="index.html#download">Download</a>
+      <a href="index.html#install">Install Guide</a>
+      <a href="index.html#india">India Zone</a>
+      <a href="index.html#compare">Compare</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="index.html#download" class="nav-cta">&dwnarr; Free Download</a>
+    </div>
+    <button class="nav-hamburger" id="navHamburger" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false">
+      <span class="hb-line"></span><span class="hb-line"></span><span class="hb-line"></span>
+    </button>
+  </div>
+</nav>
+
+<div class="nav-mobile-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+<div class="nav-mobile" id="mobileMenu" role="dialog" aria-label="Navigation menu">
+  <div class="nav-mobile-header">
+    <div class="nav-mobile-logo">
+      <div class="nav-mobile-logo-icon"><svg viewBox="0 0 24 24"><path d="M15 10l-9 5V5l9 5zm0 0l4-4v8l-4-4z"/></svg></div>
+      <span class="nav-mobile-logo-text">CapCut <span class="cyan">MOD</span></span>
+    </div>
+    <button class="nav-mobile-close" onclick="closeMenu()" aria-label="Close menu">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <nav class="nav-mobile-links">
+    <a href="index.html#features" class="nav-mobile-link" onclick="closeMenu()">
+      <div class="nav-mobile-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></div>
+      <span class="nav-mobile-link-label">Features</span>
+      <svg class="nav-mobile-link-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9,18 15,12 9,6"/></svg>
+    </a>
+    <a href="index.html#download" class="nav-mobile-link" onclick="closeMenu()">
+      <div class="nav-mobile-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div>
+      <span class="nav-mobile-link-label">Download APK</span>
+      <svg class="nav-mobile-link-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9,18 15,12 9,6"/></svg>
+    </a>
+    <a href="index.html#install" class="nav-mobile-link" onclick="closeMenu()">
+      <div class="nav-mobile-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#ff6b2b" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,8 12,12 14,14"/></svg></div>
+      <span class="nav-mobile-link-label">How to Install</span>
+      <svg class="nav-mobile-link-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9,18 15,12 9,6"/></svg>
+    </a>
+    <a href="index.html#india" class="nav-mobile-link" onclick="closeMenu()">
+      <div class="nav-mobile-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg></div>
+      <span class="nav-mobile-link-label">India Zone</span>
+      <svg class="nav-mobile-link-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9,18 15,12 9,6"/></svg>
+    </a>
+    <div class="nav-mobile-divider"></div>
+    <a href="index.html#compare" class="nav-mobile-link" onclick="closeMenu()">
+      <div class="nav-mobile-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#00d68f" stroke-width="2"><polyline points="22,12 18,12 15,21 9,3 6,12 2,12"/></svg></div>
+      <span class="nav-mobile-link-label">Compare</span>
+      <svg class="nav-mobile-link-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9,18 15,12 9,6"/></svg>
+    </a>
+    <a href="index.html#faq" class="nav-mobile-link" onclick="closeMenu()">
+      <div class="nav-mobile-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+      <span class="nav-mobile-link-label">FAQ</span>
+      <svg class="nav-mobile-link-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9,18 15,12 9,6"/></svg>
+    </a>
+  </nav>
+  <div class="nav-mobile-footer">
+    <a href="index.html#download" class="btn-primary" onclick="closeMenu()" style="width:100%;justify-content:center;border-radius:12px;font-size:15px;padding:15px 20px">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Download Free APK &mdash; v18.5.2
+    </a>
+    <div class="nav-mobile-footer-trust">
+      <span><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#00d68f" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> VirusTotal 72/72</span>
+      <span>&#127470;&#127475; India Ready</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ HERO ═══ -->
+<section class="legal-hero" role="banner">
+  <div class="legal-hero-grid" aria-hidden="true"></div>
+  <div class="container-sm">
+    <nav class="legal-breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="legal-breadcrumb-sep">/</span>
+      <span>Contact Us</span>
+    </nav>
+    <span class="legal-hero-label">Get in Touch</span>
+    <h1 class="legal-hero-title">Contact <span class="cyan">Us</span></h1>
+    <p class="legal-hero-sub">Have a question, found a broken link, want to report an issue, or submit a DMCA notice? We typically respond within <strong style="color:var(--text)">24 hours</strong> on business days.</p>
+    <div class="legal-hero-meta">
+      <div class="legal-hero-meta-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        24-hour response
+      </div>
+      <div class="legal-hero-meta-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+        Mon&ndash;Sat, 9AM&ndash;6PM IST
+      </div>
+      <div class="legal-hero-meta-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Based in India &#127470;&#127475;
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ MAIN CONTENT ═══ -->
+<div class="container-sm contact-wrap">
+
+  <!-- Quick contact cards -->
+  <div class="contact-cards" role="list">
+    <div class="contact-card" role="listitem" style="border-color:rgba(0,240,255,.12)">
+      <div class="contact-card-icon" style="background:rgba(0,240,255,.1);border:1px solid rgba(0,240,255,.2)">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </div>
+      <div class="contact-card-info">
+        <div class="contact-card-label">General Enquiries</div>
+        <a href="mailto:hello@capcutmodindia.in" class="contact-card-link" style="color:var(--cyan)">hello@capcutmodindia.in</a>
+      </div>
+    </div>
+    <div class="contact-card" role="listitem" style="border-color:rgba(255,107,43,.12)">
+      <div class="contact-card-icon" style="background:rgba(255,107,43,.1);border:1px solid rgba(255,107,43,.2)">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <div class="contact-card-info">
+        <div class="contact-card-label">DMCA / Legal</div>
+        <a href="mailto:dmca@capcutmodindia.in" class="contact-card-link" style="color:var(--orange)">dmca@capcutmodindia.in</a>
+      </div>
+    </div>
+    <div class="contact-card" role="listitem" style="border-color:rgba(0,214,143,.12)">
+      <div class="contact-card-icon" style="background:rgba(0,214,143,.1);border:1px solid rgba(0,214,143,.2)">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      </div>
+      <div class="contact-card-info">
+        <div class="contact-card-label">Telegram</div>
+        <a href="#" class="contact-card-link" style="color:var(--green)">@CapCutModIndia</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Form + Sidebar layout -->
+  <div class="contact-layout">
+
+    <!-- LEFT: Form -->
+    <div>
+      <div class="contact-form-head">
+        <span class="contact-form-label">Send a Message</span>
+        <h2 class="contact-form-title">We&rsquo;d love to <span class="cyan">hear from you</span></h2>
+        <p class="contact-form-sub">Fill in the form below and our team will get back to you as soon as possible. Fields marked <span class="form-req">*</span> are required.</p>
+      </div>
+
+      <div class="contact-form-box">
+        <div class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="cf-name">Full Name <span class="form-req">*</span></label>
+              <input class="form-input" id="cf-name" type="text" placeholder="Rahul Sharma" required autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="cf-email">Email Address <span class="form-req">*</span></label>
+              <input class="form-input" id="cf-email" type="email" placeholder="rahul@gmail.com" required autocomplete="email">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="cf-phone">Phone Number <span style="font-weight:400;text-transform:none;letter-spacing:0">(Optional)</span></label>
+              <input class="form-input" id="cf-phone" type="tel" placeholder="+91 98765 43210" autocomplete="tel">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="cf-subject">Subject <span class="form-req">*</span></label>
+              <select class="form-select" id="cf-subject" required>
+                <option value="" disabled selected>Select a subject</option>
+                <option value="download">Download Issue / Broken Link</option>
+                <option value="install">Installation Problem</option>
+                <option value="feature">Feature Request</option>
+                <option value="dmca">DMCA / Copyright Complaint</option>
+                <option value="safety">Safety / Malware Concern</option>
+                <option value="feedback">General Feedback</option>
+                <option value="press">Press / Media Enquiry</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="cf-device">Your Device <span style="font-weight:400;text-transform:none;letter-spacing:0">(Optional)</span></label>
+            <input class="form-input" id="cf-device" type="text" placeholder="e.g. Redmi Note 13, Android 14">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="cf-message">Message <span class="form-req">*</span></label>
+            <textarea class="form-textarea" id="cf-message" placeholder="Describe your issue or question in detail. The more info you provide, the faster we can help." required></textarea>
+          </div>
+          <div class="consent-row">
+            <input type="checkbox" id="cf-consent">
+            <label class="consent-label" for="cf-consent">I agree to the <a href="privacy-policy.html">Privacy Policy</a> and consent to my data being used to respond to this enquiry. <span class="form-req">*</span></label>
+          </div>
+          <div>
+            <button type="button" class="form-submit-btn" onclick="submitForm()">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22,2 15,22 11,13 2,9"/></svg>
+              Send Message
+            </button>
+          </div>
+        </div>
+        <div class="form-success" id="formSuccess">
+          <div class="form-success-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg>
+          </div>
+          <h3 class="form-success-title">Message Sent!</h3>
+          <p class="form-success-sub">Thanks for reaching out. We&rsquo;ll reply to your email within 24 hours on business days.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Sidebar -->
+    <aside class="contact-sidebar">
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">Response Times</div>
+        <div>
+          <div class="sidebar-response-row">
+            <span style="color:var(--muted)">General enquiries</span>
+            <span style="color:var(--green);font-weight:700">&lt; 24 hrs</span>
+          </div>
+          <div class="sidebar-response-row">
+            <span style="color:var(--muted)">Download issues</span>
+            <span style="color:var(--cyan);font-weight:700">&lt; 12 hrs</span>
+          </div>
+          <div class="sidebar-response-row">
+            <span style="color:var(--muted)">DMCA notices</span>
+            <span style="color:var(--orange);font-weight:700">&lt; 48 hrs</span>
+          </div>
+          <div class="sidebar-response-row">
+            <span style="color:var(--muted)">Press enquiries</span>
+            <span style="color:var(--muted);font-weight:700">2&ndash;3 days</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">Operating Hours</div>
+        <div class="sidebar-hours">
+          <strong style="color:var(--text)">Monday &ndash; Saturday</strong><br>
+          9:00 AM &ndash; 6:00 PM IST<br><br>
+          <strong style="color:var(--text)">Sunday &amp; Public Holidays</strong><br>
+          Limited support &mdash; expect delays
+        </div>
+      </div>
+
+      <div class="sidebar-card sidebar-cta">
+        <div class="sidebar-card-title">Quick Help</div>
+        <div class="sidebar-quicklinks">
+          <a href="index.html#faq" class="sidebar-quicklink">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9,18 15,12 9,6"/></svg>
+            Browse our FAQ first
+          </a>
+          <a href="index.html#install" class="sidebar-quicklink">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9,18 15,12 9,6"/></svg>
+            Installation guide
+          </a>
+          <a href="dmca-notice.html" class="sidebar-quicklink">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9,18 15,12 9,6"/></svg>
+            Submit DMCA notice
+          </a>
+          <a href="privacy-policy.html" class="sidebar-quicklink">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9,18 15,12 9,6"/></svg>
+            Privacy Policy
+          </a>
+        </div>
+      </div>
+    </aside>
+
+  </div><!-- end contact-layout -->
+</div><!-- end container-sm -->
+
+<!-- ═══ FOOTER ═══ -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-logo">
+          <div class="nav-logo-icon" style="width:32px;height:32px">
+            <svg viewBox="0 0 24 24" style="width:17px;height:17px" fill="#fff"><path d="M15 10l-9 5V5l9 5zm0 0l4-4v8l-4-4z"/></svg>
+          </div>
+          <span style="font-family:var(--font-display);font-size:20px">CapCut <span class="cyan">MOD India</span></span>
+        </div>
+        <p class="footer-desc">India&rsquo;s most trusted source for CapCut Mod APK downloads. Every release is verified, scanned, and tested on Indian devices before publishing.</p>
+        <div class="footer-social">
+          <a href="#" class="footer-social-link" aria-label="YouTube">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.41 19.1C5.12 19.56 12 19.56 12 19.56s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95 29 29 0 00.46-5.34 29 29 0 00-.46-5.33z"/><polygon points="9.75,15.02 15.5,11.75 9.75,8.48 9.75,15.02" fill="#000"/></svg>
+          </a>
+          <a href="#" class="footer-social-link" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="footer-social-link" aria-label="Telegram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.96 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Quick Links</div>
+        <nav class="footer-links">
+          <a href="index.html#features">All Features</a>
+          <a href="index.html#download">Download APK</a>
+          <a href="index.html#install">Install Guide</a>
+          <a href="index.html#india">India Zone</a>
+          <a href="index.html#compare">App Comparison</a>
+          <a href="index.html#faq">FAQ</a>
+        </nav>
+      </div>
+      <div>
+        <div class="footer-col-title">APK Versions</div>
+        <nav class="footer-links">
+          <a href="#">CapCut v18.5.2 (Latest)</a>
+          <a href="#">CapCut v18.3.0</a>
+          <a href="#">CapCut v17.6.0</a>
+          <a href="#">CapCut v15.10.7 (Lite)</a>
+          <a href="#">All Old Versions</a>
+        </nav>
+      </div>
+      <div>
+        <div class="footer-col-title">Legal</div>
+        <nav class="footer-links">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-of-use.html">Terms of Use</a>
+          <a href="dmca-notice.html">DMCA Notice</a>
+          <a href="disclaimer.html">Disclaimer</a>
+          <a href="contact-us.html">Contact Us</a>
+          <a href="about-us.html">About Us</a>
+        </nav>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-disclaimer"><strong>Disclaimer &amp; DMCA:</strong> This website is not affiliated with, endorsed by, or connected to ByteDance Pte. Ltd. or the official CapCut application. &ldquo;CapCut&rdquo; is a trademark of ByteDance. All APK files are shared strictly for personal and educational use. By downloading, you agree to do so at your own risk.</p>
+      <p class="footer-copy">&copy; 2025 CapCutModIndia.in<br>Made with &hearts; for &#127470;&#127475; Creators</p>
+    </div>
+  </div>
+</footer>
+
+<button id="scrollTopBtn" aria-label="Scroll back to top">
+  <span class="stt-ring" aria-hidden="true"></span>
+  <span class="stt-ring-inner" aria-hidden="true"></span>
+  <span class="stt-face" aria-hidden="true"></span>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18,15 12,9 6,15"/></svg>
+</button>
+
+<script>
+window.addEventListener('scroll',function(){document.getElementById('nav').classList.toggle('scrolled',window.scrollY>50);},{passive:true});
+function toggleMenu(){
+  var m=document.getElementById('mobileMenu'),o=document.getElementById('menuOverlay'),b=document.getElementById('navHamburger');
+  if(m.classList.contains('open')){closeMenu();}
+  else{m.classList.add('open');o.classList.add('open');b.classList.add('active');b.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
+}
+function closeMenu(){
+  var m=document.getElementById('mobileMenu'),o=document.getElementById('menuOverlay'),b=document.getElementById('navHamburger');
+  m.classList.remove('open');o.classList.remove('open');b.classList.remove('active');b.setAttribute('aria-expanded','false');document.body.style.overflow='';
+}
+(function(){
+  var btn=document.getElementById('scrollTopBtn'),ring=btn?btn.querySelector('.stt-ring'):null;
+  if(!btn)return;
+  function update(){
+    var s=window.scrollY,t=document.documentElement.scrollHeight-window.innerHeight,p=t>0?(s/t)*100:0;
+    btn.classList.toggle('visible',s>300);
+    if(ring)ring.style.setProperty('--scroll-pct',p.toFixed(1));
+  }
+  window.addEventListener('scroll',update,{passive:true});update();
+  btn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+}());
+function submitForm(){
+  var n=document.getElementById('cf-name').value.trim(),
+      e=document.getElementById('cf-email').value.trim(),
+      s=document.getElementById('cf-subject').value,
+      m=document.getElementById('cf-message').value.trim(),
+      c=document.getElementById('cf-consent').checked;
+  if(!n||!e||!s||!m){alert('Please fill in all required fields.');return;}
+  if(!c){alert('Please agree to the Privacy Policy.');return;}
+  document.getElementById('contactForm').style.display='none';
+  document.getElementById('formSuccess').style.display='block';
+}
+</script>
+</body>
+</html>
