@@ -4611,6 +4611,18 @@ if (dlBtn) {
 /* ═══════════════════════════════════════
    SCROLL TO TOP
 ═══════════════════════════════════════ */
+// (function(){
+//   var btn=document.getElementById('scrollTopBtn'),ring=btn?btn.querySelector('.stt-ring'):null;
+//   if(!btn)return;
+//   function update(){
+//     var s=window.scrollY,t=document.documentElement.scrollHeight-window.innerHeight,p=t>0?(s/t)*100:0;
+//     btn.classList.toggle('visible',s>300);
+//     if(ring)ring.style.setProperty('--scroll-pct',p.toFixed(1));
+//   }
+//   window.addEventListener('scroll',update,{passive:true});update();
+//   btn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+// }());
+
 (function(){
   var btn=document.getElementById('scrollTopBtn'),ring=btn?btn.querySelector('.stt-ring'):null;
   if(!btn)return;
@@ -4621,6 +4633,22 @@ if (dlBtn) {
   }
   window.addEventListener('scroll',update,{passive:true});update();
   btn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+}());
+/* TOC active highlight */
+(function(){
+  var links=document.querySelectorAll('.legal-toc-link[href^="#"]');
+  if(!links.length)return;
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        links.forEach(function(l){l.classList.remove('active');});
+        var id=e.target.id;
+        var active=document.querySelector('.legal-toc-link[href="#'+id+'"]');
+        if(active)active.classList.add('active');
+      }
+    });
+  },{rootMargin:'-80px 0px -70% 0px'});
+  document.querySelectorAll('.legal-section[id]').forEach(function(s){obs.observe(s);});
 }());
 
 /* ═══════════════════════════════════════
