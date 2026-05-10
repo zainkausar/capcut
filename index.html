@@ -511,6 +511,7 @@ button { cursor: pointer; font-family: var(--font-body); }
 .hero-security {
   display: flex; align-items: center; gap: 16px;
   margin-top: 24px; flex-wrap: wrap;
+  display:none;
 }
 .sec-logo {
   display: flex; align-items: center; gap: 8px;
@@ -525,7 +526,7 @@ button { cursor: pointer; font-family: var(--font-body); }
   display: flex; align-items: center; justify-content: center; flex-shrink: 0;
 }
 .hero-security-label { display: none; }
-.hero-security-logos { display: contents; }
+.hero-security-logos { display: contents; display:none; }
 .sec-logo .sec-score { display: none; }
 
 /* HERO RIGHT: APP PREVIEW */
@@ -1217,13 +1218,13 @@ footer {
   .cta-actions .btn-primary { font-size: 15px; padding: 14px 20px; }
 }
 @media (max-width: 480px) {
-  .hero-title { font-size: 34px; }
+  .hero-title { font-size: 40px; }
   .feat-grid { grid-template-columns: 1fr; }
   .india-phones { grid-template-columns: 1fr; }
   .hero-meta { flex-wrap: wrap; gap: 10px; }
   .hero-meta-sep { display: none; }
   section { padding: 50px 0; }
-  .hero-security { gap: 10px; }
+  .hero-security { gap: 10px; display:none;}
   .sec-logo { padding: 8px 12px; font-size: 11px; }
   .btn-primary { font-size: 15px; padding: 14px 20px; }
   .btn-secondary { font-size: 14px; padding: 12px 18px; }
@@ -1247,7 +1248,7 @@ img, svg, video, iframe { max-width: 100%; }
 pre, code { overflow-x: auto; }
 
 @media (max-width: 360px) {
-  .hero-title { font-size: 30px; }
+  .hero-title { font-size: 50px; text-align:left;}
   .phone-mockup { width: 180px; }
   .nav-logo-text { font-size: 18px; }
   .container { padding: 0 14px; }
@@ -1361,11 +1362,13 @@ pre, code { overflow-x: auto; }
 .hero-security {
   display: flex; align-items: center; gap: 12px;
   margin-top: 24px; flex-wrap: wrap;
+  display:none;
 }
 .hero-security-title {
   font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
   text-transform: uppercase; color: var(--muted2);
   margin-right: 4px; white-space: nowrap;
+  display:none;
 }
 .sec-logo {
   display: flex; align-items: center; gap: 8px;
@@ -1411,13 +1414,13 @@ pre, code { overflow-x: auto; }
   }
   .hero-inner > div:first-child { order: 1; }
   .hero-visual { order: 2; margin-top: 32px; }
-  .hero-badges { justify-content: center; }
+  .hero-badges { justify-content: left; }
   .hero-actions { justify-content: center; }
   .hero-desi { justify-content: center; }
   .hero-meta { justify-content: center; flex-wrap: wrap; }
   .hero-meta-sep { display: none; }
-  .hero-security { justify-content: center; }
-  .hero-subtitle { margin: 0 auto 10px; }
+  .hero-security { justify-content: center; display:none; }
+  .hero-subtitle { margin: 0 auto 10px; text-align:left; }
 
   /* Phone mockup clean on mobile */
   .phone-mockup {
@@ -1580,7 +1583,7 @@ pre, code { overflow-x: auto; }
 
 /* Mobile: hero security logos stack nicely */
 @media (max-width: 480px) {
-  .hero-security { gap: 8px; }
+  .hero-security { gap: 8px; display:none;}
   .sec-logo { padding: 7px 10px; font-size: 11px; }
   .sec-logo img { width: 18px; height: 18px; }
   .btn-download-animated { font-size: 14px; padding: 14px 22px; }
@@ -2107,6 +2110,10 @@ pre, code { overflow-x: auto; }
   transition: all 0.2s;
 }
 .cmodal-btn-all:hover { background: rgba(0,240,255,0.12); border-color: rgba(0,240,255,0.4); }
+
+.faq-heading{
+  font-size:40px;
+}
 
 </style>
 </head>
@@ -3934,7 +3941,7 @@ pre, code { overflow-x: auto; }
       <!-- Sidebar -->
       <div class="faq-sidebar">
         <span class="section-label">Got Questions?</span>
-        <h2 id="faq-heading" class="section-title">Frequently<br>Asked<br><span class="cyan">Questions</span></h2>
+        <h2 id="faq-heading" class="section-title">Frequently Asked<br><span class="cyan">Questions</span></h2>
         <p class="section-sub" style="font-size:14px">Every question Indian creators ask about CapCut Mod APK — answered honestly, without marketing fluff.</p>
         <div style="margin-top:24px">
           <a href="#download" class="btn-primary" style="font-size:14px;padding:13px 22px" aria-label="Download CapCut Mod APK">
