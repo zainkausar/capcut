@@ -1805,121 +1805,6 @@ pre, code { overflow-x: auto; }
 /* ═══════════════════════════════════════
    SCROLL TO TOP BUTTON
 ═══════════════════════════════════════ */
-/* #scrollTopBtn {
-  position: fixed;
-  bottom: 92px;
-  right: 20px;
-  z-index: 997;
-  width: 52px;
-  height: 52px;
-  border-radius: 16px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(16px) scale(0.8);
-  transition: opacity 0.4s cubic-bezier(0.34,1.56,0.64,1),
-              visibility 0.4s ease,
-              transform 0.4s cubic-bezier(0.34,1.56,0.64,1);
-  outline: none;
-  -webkit-tap-highlight-color: transparent;
-}
-#scrollTopBtn.visible {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0) scale(1);
-} */
-/* Glassmorphism face */
-/* #scrollTopBtn .stt-face {
-  position: absolute; inset: 0;
-  border-radius: 16px;
-  background: linear-gradient(145deg, rgba(0,240,255,0.12) 0%, rgba(124,58,237,0.1) 100%);
-  border: 1px solid rgba(0,240,255,0.25);
-  backdrop-filter: blur(12px);
-  box-shadow:
-    0 4px 24px rgba(0,0,0,0.5),
-    0 0 0 0 rgba(0,240,255,0),
-    inset 0 1px 0 rgba(255,255,255,0.08);
-  transition: border-color 0.25s, box-shadow 0.25s, background 0.25s;
-}
-#scrollTopBtn:hover .stt-face {
-  background: linear-gradient(145deg, rgba(0,240,255,0.18) 0%, rgba(124,58,237,0.15) 100%);
-  border-color: rgba(0,240,255,0.55);
-  box-shadow:
-    0 8px 32px rgba(0,0,0,0.55),
-    0 0 24px rgba(0,240,255,0.2),
-    inset 0 1px 0 rgba(255,255,255,0.12);
-}
-#scrollTopBtn:active .stt-face {
-  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
-} */
-/* Conic progress ring */
-/* #scrollTopBtn .stt-ring {
-  position: absolute;
-  inset: -4px;
-  border-radius: 20px;
-  background: conic-gradient(
-    var(--cyan) calc(var(--scroll-pct,0) * 1%),
-    transparent 0%
-  );
-  z-index: -1;
-}
-#scrollTopBtn .stt-ring-inner {
-  position: absolute;
-  inset: 2px;
-  border-radius: 14px;
-  background: var(--bg2);
-  z-index: -1;
-} */
-/* Arrow icon */
-/* #scrollTopBtn svg {
-  position: absolute; inset: 0;
-  margin: auto;
-  width: 22px; height: 22px;
-  color: var(--cyan);
-  filter: drop-shadow(0 0 6px rgba(0,240,255,0.5));
-  transition: transform 0.25s cubic-bezier(0.34,1.56,0.64,1), filter 0.2s;
-}
-#scrollTopBtn:hover svg {
-  transform: translateY(-3px);
-  filter: drop-shadow(0 0 10px rgba(0,240,255,0.8));
-}
-#scrollTopBtn:active svg { transform: translateY(0); } */
-/* Tooltip */
-/* #scrollTopBtn::before {
-  content: 'Back to top';
-  position: absolute;
-  right: calc(100% + 10px);
-  top: 50%;
-  transform: translateY(-50%) translateX(6px);
-  background: rgba(8,15,26,0.96);
-  border: 1px solid rgba(0,240,255,0.25);
-  border-radius: 8px;
-  padding: 5px 11px;
-  font-size: 11px;
-  font-weight: 700;
-  font-family: var(--font-body);
-  color: var(--cyan);
-  white-space: nowrap;
-  letter-spacing: 0.04em;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.2s, transform 0.2s;
-} */
-/* #scrollTopBtn:hover::before {
-  opacity: 1;
-  transform: translateY(-50%) translateX(0);
-} */
-/* @media (min-width: 769px) {
-  #scrollTopBtn { bottom: 32px; right: 30px; }
-} */
-/* @media (max-width: 480px) {
-  #scrollTopBtn { bottom: 84px; right: 14px; width: 46px; height: 46px; border-radius: 13px; }
-  #scrollTopBtn .stt-face { border-radius: 13px; }
-  #scrollTopBtn::before { display: none; }
-} */
 
 #scrollTopBtn{position:fixed;bottom:28px;right:24px;width:50px;height:50px;border-radius:16px;background:none;border:none;cursor:pointer;z-index:900;opacity:0;visibility:hidden;transform:translateY(16px) scale(.8);transition:opacity .4s cubic-bezier(.34,1.56,.64,1),visibility .4s ease,transform .4s cubic-bezier(.34,1.56,.64,1);outline:none}
 #scrollTopBtn.visible{opacity:1;visibility:visible;transform:translateY(0) scale(1)}
@@ -4457,16 +4342,6 @@ pre, code { overflow-x: auto; }
 <!-- ══════════════════════════════════════
      SCROLL TO TOP BUTTON
 ══════════════════════════════════════ -->
-<!-- <button id="scrollTopBtn" aria-label="Scroll back to top">
-  <span class="stt-ring"  aria-hidden="true"></span>
-  <span class="stt-ring-inner" aria-hidden="true"></span>
-  <span class="stt-face"  aria-hidden="true"></span>
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8"
-       stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-    <polyline points="18,15 12,9 6,15"/>
-  </svg>
-</button> -->
-
 <button id="scrollTopBtn" aria-label="Scroll back to top">
   <span class="stt-ring" aria-hidden="true"></span>
   <span class="stt-ring-inner" aria-hidden="true"></span>
@@ -4736,38 +4611,6 @@ if (dlBtn) {
 /* ═══════════════════════════════════════
    SCROLL TO TOP
 ═══════════════════════════════════════ */
-// (function () {
-//   const btn  = document.getElementById('scrollTopBtn');
-//   const ring = btn ? btn.querySelector('.stt-ring') : null;
-//   if (!btn) return;
-
-//   function update() {
-//     const scrolled = window.scrollY;
-//     const total    = document.documentElement.scrollHeight - window.innerHeight;
-//     const pct      = total > 0 ? (scrolled / total) * 100 : 0;
-
-//     // Show / hide
-//     btn.classList.toggle('visible', scrolled > 300);
-
-//     // Drive conic-gradient progress via CSS custom property
-//     if (ring) ring.style.setProperty('--scroll-pct', pct.toFixed(1));
-//   }
-
-//   window.addEventListener('scroll', update, { passive: true });
-//   update(); // run once on load
-
-//   btn.addEventListener('click', function () {
-//     window.scrollTo({ top: 0, behavior: 'smooth' });
-//   });
-
-//   btn.addEventListener('keydown', function (e) {
-//     if (e.key === 'Enter' || e.key === ' ') {
-//       e.preventDefault();
-//       window.scrollTo({ top: 0, behavior: 'smooth' });
-//     }
-//   });
-// }());
-
 (function(){
   var btn=document.getElementById('scrollTopBtn'),ring=btn?btn.querySelector('.stt-ring'):null;
   if(!btn)return;
