@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy – CapCut Mod India</title>
+<meta name="description" content="Privacy Policy for CapCutModIndia.in — how we collect, use, and protect your data.">
+<link rel="canonical" href="https://capcutmodindia.in/privacy-policy">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+/* ── RESET & TOKENS ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#04080f;--bg2:#080f1a;--bg3:#0c1622;
+  --border:rgba(255,255,255,0.07);--border-accent:rgba(0,240,255,0.25);
+  --cyan:#00f0ff;--cyan2:#00c8e0;--orange:#ff6b2b;--green:#00d68f;--purple:#7c3aed;
+  --text:#f0f4f8;--muted:#8899aa;--muted2:#4a6070;--card:#0c1826;
+  --font-display:'Bebas Neue',sans-serif;--font-body:'Space Grotesk',sans-serif;
+  --radius:14px;
+}
+html{scroll-behavior:smooth;font-size:16px;overflow-x:hidden}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button{cursor:pointer;font-family:var(--font-body)}
+
+/* ── LAYOUT ── */
+.container{max-width:1140px;margin:0 auto;padding:0 20px}
+.container-sm{max-width:780px;margin:0 auto;padding:0 20px}
+.cyan{color:var(--cyan)}.green{color:var(--green)}.orange{color:var(--orange)}
+
+/* ── BUTTONS ── */
+.btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--cyan);color:#000;font-weight:700;font-size:16px;padding:16px 32px;border-radius:var(--radius);border:none;transition:all .25s ease;white-space:nowrap}
+.btn-primary:hover{background:var(--cyan2);transform:translateY(-2px);box-shadow:0 0 50px rgba(0,240,255,.5)}
+.btn-secondary{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--text);font-weight:600;font-size:15px;padding:14px 28px;border-radius:var(--radius);border:1px solid var(--border);transition:all .2s ease}
+.btn-secondary:hover{border-color:var(--cyan);color:var(--cyan)}
+
+/* ── NAV ── */
+#nav{position:fixed;top:0;left:0;right:0;z-index:999;transition:all .3s ease;padding:16px 0}
+#nav.scrolled{background:rgba(4,8,15,.95);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:10px 0}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:1140px;margin:0 auto;padding:0 20px}
+.nav-logo{display:flex;align-items:center;gap:10px}
+.nav-logo-icon{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--cyan),var(--purple));display:flex;align-items:center;justify-content:center}
+.nav-logo-icon svg{width:20px;height:20px;fill:#fff}
+.nav-logo-text{font-family:var(--font-display);font-size:22px;letter-spacing:.05em}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-links a{font-size:14px;color:var(--muted);font-weight:500;transition:color .2s;letter-spacing:.02em}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{background:var(--cyan);color:#000;font-size:13px;font-weight:700;padding:9px 20px;border-radius:8px;transition:all .2s}
+.nav-cta:hover{background:var(--cyan2);transform:scale(1.04)}
+.nav-hamburger{display:none;background:none;border:none;width:40px;height:40px;cursor:pointer;padding:0;position:relative;z-index:1001;flex-direction:column;align-items:center;justify-content:center;gap:5px}
+.hb-line{display:block;height:2px;border-radius:2px;background:var(--text);transition:all .35s cubic-bezier(.4,0,.2,1);transform-origin:center}
+.hb-line:nth-child(1){width:22px}.hb-line:nth-child(2){width:14px;margin-left:-8px;opacity:.6}.hb-line:nth-child(3){width:18px}
+.nav-hamburger.active .hb-line:nth-child(1){width:20px;transform:translateY(7px) rotate(45deg)}
+.nav-hamburger.active .hb-line:nth-child(2){width:0;opacity:0}
+.nav-hamburger.active .hb-line:nth-child(3){width:20px;transform:translateY(-7px) rotate(-45deg)}
+
+/* MOBILE DRAWER */
+.nav-mobile-overlay{display:none;position:fixed;inset:0;z-index:998;background:rgba(4,8,15,.75);backdrop-filter:blur(6px);opacity:0;transition:opacity .3s ease}
+.nav-mobile-overlay.open{opacity:1;display:block}
+.nav-mobile{visibility:hidden;position:fixed;top:0;right:0;bottom:0;z-index:999;width:min(340px,90vw);background:linear-gradient(180deg,#080f1a 0%,#04080f 100%);border-left:1px solid var(--border);transform:translateX(100%);transition:transform .38s cubic-bezier(.4,0,.2,1),visibility .38s;overflow-y:auto;display:flex;flex-direction:column;box-shadow:-20px 0 60px rgba(0,0,0,.6)}
+.nav-mobile.open{transform:translateX(0);visibility:visible}
+.nav-mobile-header{display:flex;align-items:center;justify-content:space-between;padding:22px 22px 18px;border-bottom:1px solid var(--border);background:rgba(0,240,255,.02)}
+.nav-mobile-logo{display:flex;align-items:center;gap:10px}
+.nav-mobile-logo-icon{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--cyan),var(--purple));display:flex;align-items:center;justify-content:center}
+.nav-mobile-logo-icon svg{width:18px;height:18px;fill:#fff}
+.nav-mobile-logo-text{font-family:var(--font-display);font-size:20px;letter-spacing:.05em}
+.nav-mobile-close{width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,.06);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--muted);transition:all .2s}
+.nav-mobile-close:hover{color:var(--cyan);border-color:rgba(0,240,255,.4);background:rgba(0,240,255,.08)}
+.nav-mobile-links{display:flex;flex-direction:column;padding:12px 0;flex:1}
+.nav-mobile-link{display:flex;align-items:center;gap:14px;padding:15px 22px;font-size:15px;font-weight:600;color:var(--muted);transition:all .2s;border-left:3px solid transparent;letter-spacing:.01em}
+.nav-mobile-link:hover{color:var(--text);background:rgba(255,255,255,.03);border-left-color:var(--cyan);padding-left:25px}
+.nav-mobile-link-icon{width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.04);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .2s}
+.nav-mobile-link:hover .nav-mobile-link-icon{background:rgba(0,240,255,.08);border-color:rgba(0,240,255,.25)}
+.nav-mobile-link-icon svg{width:16px;height:16px}
+.nav-mobile-link-label{flex:1}
+.nav-mobile-link-arrow{color:var(--muted2);transition:transform .2s}
+.nav-mobile-link:hover .nav-mobile-link-arrow{transform:translateX(4px);color:var(--cyan)}
+.nav-mobile-divider{height:1px;background:var(--border);margin:8px 22px}
+.nav-mobile-footer{padding:18px 22px 32px;border-top:1px solid var(--border);background:rgba(0,240,255,.015)}
+.nav-mobile-footer .btn-primary{width:100%;justify-content:center;border-radius:12px;font-size:15px;padding:15px 20px}
+.nav-mobile-footer-trust{display:flex;justify-content:center;gap:14px;margin-top:14px;font-size:11px;color:var(--muted2)}
+.nav-mobile-footer-trust span{display:flex;align-items:center;gap:4px}
+
+/* ── PAGE HERO ── */
+.page-hero{
+  padding:130px 0 70px;
+  background:
+    radial-gradient(ellipse 60% 60% at 15% 40%,rgba(0,240,255,.05) 0%,transparent 55%),
+    radial-gradient(ellipse 50% 40% at 85% 60%,rgba(124,58,237,.06) 0%,transparent 55%),
+    var(--bg);
+  position:relative;overflow:hidden;
+}
+.page-hero-grid{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 80% 80% at 50% 0%,black 0%,transparent 70%)}
+.page-hero-label{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan);display:block;margin-bottom:12px}
+.page-hero-title{font-family:var(--font-display);font-size:clamp(36px,6vw,72px);line-height:1;letter-spacing:.02em;margin-bottom:16px}
+.page-hero-sub{font-size:16px;color:var(--muted);max-width:560px;line-height:1.7;margin-bottom:24px}
+.page-hero-meta{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.page-hero-meta-item{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted2);background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:8px;padding:6px 12px}
+.page-hero-meta-item svg{flex-shrink:0}
+
+/* ── BREADCRUMB ── */
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted2);margin-bottom:24px;flex-wrap:wrap}
+.breadcrumb a{color:var(--muted);transition:color .2s}.breadcrumb a:hover{color:var(--cyan)}
+.breadcrumb-sep{color:var(--muted2)}
+.breadcrumb-current{color:var(--text);font-weight:600}
+
+/* ── CONTENT LAYOUT ── */
+.legal-layout{display:grid;grid-template-columns:240px 1fr;gap:40px;padding:60px 0 80px;align-items:start}
+.legal-toc{position:sticky;top:90px}
+.legal-toc-title{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted2);margin-bottom:16px}
+.legal-toc-list{list-style:none;display:flex;flex-direction:column;gap:2px}
+.legal-toc-list li a{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--muted);padding:7px 10px;border-radius:8px;border-left:2px solid transparent;transition:all .2s}
+.legal-toc-list li a:hover,.legal-toc-list li a.active{color:var(--cyan);background:rgba(0,240,255,.06);border-left-color:var(--cyan)}
+.legal-toc-list li a svg{width:13px;height:13px;flex-shrink:0;opacity:.6}
+
+/* ── PROSE ── */
+.legal-prose{min-width:0}
+.legal-section{margin-bottom:52px;scroll-margin-top:100px}
+.legal-section-header{display:flex;align-items:center;gap:14px;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--border)}
+.legal-section-num{font-family:var(--font-display);font-size:32px;color:var(--cyan);opacity:.35;line-height:1;flex-shrink:0;width:36px}
+.legal-section-icon{width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.legal-section-title{font-family:var(--font-display);font-size:clamp(20px,3vw,26px);letter-spacing:.03em}
+.legal-prose p{font-size:15px;color:var(--muted);line-height:1.8;margin-bottom:14px}
+.legal-prose p:last-child{margin-bottom:0}
+.legal-prose strong{color:var(--text);font-weight:700}
+.legal-prose a{color:var(--cyan);text-decoration:underline;text-decoration-color:rgba(0,240,255,.35);transition:color .2s}
+.legal-prose a:hover{color:var(--cyan2)}
+.legal-prose ul,.legal-prose ol{padding-left:20px;margin:10px 0 14px;display:flex;flex-direction:column;gap:8px}
+.legal-prose li{font-size:15px;color:var(--muted);line-height:1.7;padding-left:4px}
+.legal-prose ul li::marker{color:var(--cyan)}
+.legal-prose ol li::marker{color:var(--cyan);font-weight:700}
+
+/* Info box */
+.info-box{background:rgba(0,240,255,.05);border:1px solid rgba(0,240,255,.2);border-radius:12px;padding:16px 18px;margin:16px 0;display:flex;gap:12px;align-items:flex-start}
+.info-box-icon{flex-shrink:0;width:20px;height:20px;color:var(--cyan);margin-top:1px}
+.info-box p{margin:0!important;font-size:14px;color:var(--muted)}
+.warn-box{background:rgba(255,107,43,.05);border:1px solid rgba(255,107,43,.2);border-radius:12px;padding:16px 18px;margin:16px 0;display:flex;gap:12px;align-items:flex-start}
+.warn-box-icon{flex-shrink:0;width:20px;height:20px;color:var(--orange);margin-top:1px}
+.warn-box p{margin:0!important;font-size:14px;color:var(--muted)}
+
+/* Data table */
+.data-table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px}
+.data-table th{text-align:left;font-weight:700;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted2);padding:10px 14px;border-bottom:1px solid var(--border);background:rgba(255,255,255,.02)}
+.data-table td{padding:12px 14px;border-bottom:1px solid var(--border);color:var(--muted);vertical-align:top;line-height:1.6}
+.data-table td:first-child{color:var(--text);font-weight:600}
+.data-table tr:last-child td{border-bottom:none}
+.table-wrap{overflow-x:auto;border-radius:12px;border:1px solid var(--border);margin:16px 0}
+
+/* ── FOOTER ── */
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:60px 0 28px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.footer-brand-logo{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.footer-desc{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:20px;max-width:280px}
+.footer-social{display:flex;gap:10px}
+.footer-social-link{width:34px;height:34px;border-radius:9px;background:rgba(255,255,255,.06);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--muted);transition:all .2s}
+.footer-social-link:hover{color:var(--cyan);border-color:rgba(0,240,255,.3);background:rgba(0,240,255,.08)}
+.footer-col-title{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted2);margin-bottom:14px}
+.footer-links{display:flex;flex-direction:column;gap:10px}
+.footer-links a{font-size:13px;color:var(--muted);transition:color .2s;display:flex;align-items:center;gap:6px}
+.footer-links a:hover{color:var(--cyan)}
+.footer-bottom{border-top:1px solid var(--border);padding-top:24px;display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap}
+.footer-disclaimer{font-size:11.5px;color:var(--muted2);line-height:1.7;max-width:680px}
+.footer-copy{font-size:12px;color:var(--muted2);white-space:nowrap;text-align:right}
+.footer-links .active-link{color:var(--cyan)}
+
+/* ── SCROLL TO TOP ── */
+#sttBtn{position:fixed;bottom:32px;right:30px;z-index:995;width:52px;height:52px;border-radius:16px;background:none;border:none;cursor:pointer;padding:0;opacity:0;visibility:hidden;transform:translateY(16px) scale(.8);transition:opacity .4s cubic-bezier(.34,1.56,.64,1),visibility .4s,transform .4s cubic-bezier(.34,1.56,.64,1);-webkit-tap-highlight-color:transparent;outline:none}
+#sttBtn.visible{opacity:1;visibility:visible;transform:translateY(0) scale(1)}
+#sttBtn .stt-face{position:absolute;inset:0;border-radius:16px;background:linear-gradient(145deg,rgba(0,240,255,.12) 0%,rgba(124,58,237,.1) 100%);border:1px solid rgba(0,240,255,.25);box-shadow:0 4px 24px rgba(0,0,0,.5);transition:border-color .25s,box-shadow .25s}
+#sttBtn:hover .stt-face{border-color:rgba(0,240,255,.55);box-shadow:0 8px 32px rgba(0,0,0,.55),0 0 24px rgba(0,240,255,.2)}
+#sttBtn .stt-ring{position:absolute;inset:-4px;border-radius:20px;background:conic-gradient(var(--cyan) calc(var(--scroll-pct,0)*1%),transparent 0%);z-index:-1}
+#sttBtn .stt-ring-inner{position:absolute;inset:2px;border-radius:14px;background:var(--bg2);z-index:-1}
+#sttBtn svg{position:absolute;inset:0;margin:auto;width:22px;height:22px;color:var(--cyan);filter:drop-shadow(0 0 6px rgba(0,240,255,.5));transition:transform .25s cubic-bezier(.34,1.56,.64,1)}
+#sttBtn:hover svg{transform:translateY(-3px)}
+@media(max-width:480px){#sttBtn{bottom:84px;right:14px;width:46px;height:46px}}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){.legal-layout{grid-template-columns:200px 1fr;gap:28px}}
+@media(max-width:768px){
+  .nav-links{display:none}
+  .nav-hamburger{display:flex}
+  .legal-layout{grid-template-columns:1fr}
+  .legal-toc{display:none}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .page-hero{padding:100px 0 50px}
+}
+@media(max-width:480px){
+  .footer-grid{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column}
+  .footer-copy{text-align:left}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav" role="navigation" aria-label="Main Navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="CapCut Mod India Home">
+      <div class="nav-logo-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M15 10l-9 5V5l9 5zm0 0l4-4v8l-4-4z"/></svg>
+      </div>
+      <span class="nav-logo-text">CapCut<span class="cyan"> MOD</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#features">Features</a>
+      <a href="index.html#download">Download</a>
+      <a href="index.html#install">Install Guide</a>
+      <a href="index.html#india">India Zone</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="index.html#download" class="nav-cta">⬇ Free Download</a>
+    </div>
+    <button class="nav-hamburger" id="navHamburger" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false">
+      <span class="hb-line"></span><span class="hb-line"></span><span class="hb-line"></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-mobile-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+<div class="nav-mobile" id="mobileMenu" role="dialog" aria-label="Navigation menu">
+  <div class="nav-mobile-header">
+    <div class="nav-mobile-logo">
+      <div class="nav-mobile-logo-icon"><svg viewBox="0 0 24 24"><path d="M15 10l-9 5V5l9 5zm0 0l4-4v8l-4-4z"/></svg></div>
+      <span class="nav-mobile-logo-text">CapCut <span class="cyan">MOD</span></span>
+    </div>
+    <button class="nav-mobile-close" onclick="closeMenu()" aria-label="Close menu">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <nav class="nav-mobile-links">
+    <a href="index.html#features" class="nav-mobile-link" onclick="closeMenu()">
+      <div class="nav-mobile-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></div>
+      <span class="nav-mobile-link-label">Features</span>
+      <svg class="nav-mobile-link-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9,18 15,12 9,6"/></svg>
+    </a>
+    <a href="index.html#download" class="nav-mobile-link" onclick="closeMenu()">
+      <div class="nav-mobile-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div>
+      <span class="nav-mobile-link-label">Download APK</span>
+      <svg class="nav-mobile-link-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9,18 15,12 9,6"/></svg>
+    </a>
+    <a href="index.html#faq" class="nav-mobile-link" onclick="closeMenu()">
+      <div class="nav-mobile-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+      <span class="nav-mobile-link-label">FAQ</span>
+      <svg class="nav-mobile-link-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9,18 15,12 9,6"/></svg>
+    </a>
+  </nav>
+  <div class="nav-mobile-footer">
+    <a href="index.html#download" class="btn-primary" onclick="closeMenu()" style="font-size:14px;padding:13px 20px">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Download Free APK — v18.5.2
+    </a>
+    <div class="nav-mobile-footer-trust">
+      <span>✅ VirusTotal 72/72</span>
+      <span>🇮🇳 India Ready</span>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero" aria-labelledby="page-title">
+  <div class="page-hero-grid" aria-hidden="true"></div>
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-sep" aria-hidden="true">›</span>
+      <span class="breadcrumb-current">Privacy Policy</span>
+    </nav>
+    <span class="page-hero-label">Legal</span>
+    <h1 id="page-title" class="page-hero-title">Privacy <span class="cyan">Policy</span></h1>
+    <p class="page-hero-sub">How CapCut Mod India collects, uses, and protects the information of our visitors — written plainly, no legal jargon.</p>
+    <div class="page-hero-meta">
+      <div class="page-hero-meta-item">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Last Updated: May 2025
+      </div>
+      <div class="page-hero-meta-item">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        ~6 min read
+      </div>
+      <div class="page-hero-meta-item">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20"/></svg>
+        Applies to: India Users
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<main>
+  <div class="container">
+    <div class="legal-layout">
+
+      <!-- TABLE OF CONTENTS -->
+      <aside class="legal-toc" aria-label="Table of contents">
+        <div class="legal-toc-title">On This Page</div>
+        <ul class="legal-toc-list" role="list">
+          <li><a href="#s1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>Overview</a></li>
+          <li><a href="#s2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>What We Collect</a></li>
+          <li><a href="#s3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/></svg>How We Use Data</a></li>
+          <li><a href="#s4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Cookies</a></li>
+          <li><a href="#s5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>Third Parties</a></li>
+          <li><a href="#s6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>Data Security</a></li>
+          <li><a href="#s7"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>Your Rights</a></li>
+          <li><a href="#s8"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.82a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>Contact</a></li>
+        </ul>
+      </aside>
+
+      <!-- PROSE -->
+      <article class="legal-prose">
+
+        <div class="legal-section" id="s1">
+          <div class="legal-section-header">
+            <div class="legal-section-num">01</div>
+            <div class="legal-section-icon" style="background:rgba(0,240,255,.08);border:1px solid rgba(0,240,255,.2)">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <h2 class="legal-section-title">Overview</h2>
+          </div>
+          <div class="info-box">
+            <svg class="info-box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <p>CapCutModIndia.in does <strong>not</strong> sell, rent, or trade your personal data to any third party. We collect only the minimum data required to operate the site and improve your experience.</p>
+          </div>
+          <p>This Privacy Policy explains what information CapCut Mod India ("we", "us", "our") collects when you visit <strong>capcutmodindia.in</strong>, how we use it, and the rights you have regarding your data. By using this website you agree to the practices described below.</p>
+          <p>We are committed to protecting the privacy of all visitors, with particular care for users based in India. Our practices are aligned with the <strong>Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011</strong> under the IT Act, 2000, and international standards including GDPR where applicable.</p>
+        </div>
+
+        <div class="legal-section" id="s2">
+          <div class="legal-section-header">
+            <div class="legal-section-num">02</div>
+            <div class="legal-section-icon" style="background:rgba(0,214,143,.08);border:1px solid rgba(0,214,143,.2)">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <h2 class="legal-section-title">What We Collect</h2>
+          </div>
+          <p>We collect two categories of information:</p>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead><tr><th>Data Type</th><th>What It Is</th><th>Why Collected</th></tr></thead>
+              <tbody>
+                <tr><td>Usage / Analytics</td><td>Pages visited, time on page, scroll depth, click events, download button interactions</td><td>Improve content and UX</td></tr>
+                <tr><td>Technical Data</td><td>Browser type, operating system, screen resolution, approximate city (not precise location), ISP name</td><td>Optimise for Indian devices and connections</td></tr>
+                <tr><td>Cookie Preferences</td><td>Your Accept / Decline / custom cookie choices, stored in localStorage</td><td>Honour your consent on return visits</td></tr>
+                <tr><td>Contact Form Data</td><td>Name, email address, message content (only when you voluntarily submit the Contact Us form)</td><td>Respond to your inquiry</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>We do <strong>not</strong> collect your full IP address, Aadhaar number, PAN, financial details, passwords, or any sensitive personal information. We do not require account registration.</p>
+        </div>
+
+        <div class="legal-section" id="s3">
+          <div class="legal-section-header">
+            <div class="legal-section-num">03</div>
+            <div class="legal-section-icon" style="background:rgba(255,107,43,.08);border:1px solid rgba(255,107,43,.2)">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/></svg>
+            </div>
+            <h2 class="legal-section-title">How We Use Data</h2>
+          </div>
+          <p>Data collected is used exclusively for the following legitimate purposes:</p>
+          <ul>
+            <li>Analysing which APK versions and guides are most useful to Indian creators</li>
+            <li>Diagnosing technical issues and improving page load performance on budget Indian devices (Redmi, Realme, Samsung A-series)</li>
+            <li>Understanding which regions of India (by city) access the site most, to improve localisation</li>
+            <li>Responding to contact form inquiries and DMCA notices</li>
+            <li>Displaying contextually relevant content (not personalised advertising)</li>
+          </ul>
+          <div class="warn-box">
+            <svg class="warn-box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            <p>We never use your data for building advertising profiles, selling to data brokers, or any purpose not listed above. We do not run personalised ad networks on this site.</p>
+          </div>
+        </div>
+
+        <div class="legal-section" id="s4">
+          <div class="legal-section-header">
+            <div class="legal-section-num">04</div>
+            <div class="legal-section-icon" style="background:rgba(124,58,237,.08);border:1px solid rgba(124,58,237,.25)">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10c0-.34-.02-.67-.05-1a3.5 3.5 0 01-3.45-3.45A3.5 3.5 0 0115 4.05c-.33-.03-.66-.05-1-.05z"/></svg>
+            </div>
+            <h2 class="legal-section-title">Cookies &amp; Local Storage</h2>
+          </div>
+          <p>We use cookies and browser localStorage. When you first visit, our cookie consent banner lets you choose exactly which categories to enable. Your choices are stored locally and respected on all future visits.</p>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead><tr><th>Category</th><th>Purpose</th><th>Default</th></tr></thead>
+              <tbody>
+                <tr><td>Essential</td><td>Site navigation, security tokens, consent storage</td><td>Always On</td></tr>
+                <tr><td>Analytics</td><td>Anonymous page view and interaction stats (Google Analytics / similar)</td><td>On</td></tr>
+                <tr><td>Functional</td><td>Remember your language and display preferences</td><td>On</td></tr>
+                <tr><td>Marketing</td><td>Basic campaign tracking (not used for ad targeting)</td><td>Off</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>You can change your cookie preferences at any time by clearing your browser's localStorage or using the Manage button that appears when you revisit the site. For instructions, see your browser's help centre.</p>
+        </div>
+
+        <div class="legal-section" id="s5">
+          <div class="legal-section-header">
+            <div class="legal-section-num">05</div>
+            <div class="legal-section-icon" style="background:rgba(0,240,255,.08);border:1px solid rgba(0,240,255,.2)">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <h2 class="legal-section-title">Third-Party Services</h2>
+          </div>
+          <p>Our website uses the following third-party services that may independently collect data subject to their own privacy policies:</p>
+          <ul>
+            <li><strong>Google Analytics</strong> — anonymous traffic analysis. Data processed in the US under Google's Privacy Policy. We have enabled IP anonymisation.</li>
+            <li><strong>Google Fonts</strong> — fonts loaded from Google's CDN. Google may log font requests. No personal data from this site is shared.</li>
+            <li><strong>Cloudflare CDN</strong> — used for performance and DDoS protection. Cloudflare may process request metadata per their privacy policy.</li>
+          </ul>
+          <p>We do not embed third-party advertising networks, social media trackers, or affiliate tracking pixels. CapCutModIndia.in is an independent informational site.</p>
+        </div>
+
+        <div class="legal-section" id="s6">
+          <div class="legal-section-header">
+            <div class="legal-section-num">06</div>
+            <div class="legal-section-icon" style="background:rgba(0,214,143,.08);border:1px solid rgba(0,214,143,.2)">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+            </div>
+            <h2 class="legal-section-title">Data Security</h2>
+          </div>
+          <p>We implement industry-standard security measures to protect the limited data we do process:</p>
+          <ul>
+            <li>All pages served over <strong>HTTPS / TLS 1.3</strong></li>
+            <li>No database of user accounts or PII is maintained on our servers</li>
+            <li>Contact form submissions are transmitted via encrypted email delivery</li>
+            <li>Analytics data is aggregated and anonymised before storage</li>
+          </ul>
+          <p>While we take commercially reasonable steps to protect your information, no internet transmission is 100% secure. We encourage you to exercise caution when sharing personal information online.</p>
+        </div>
+
+        <div class="legal-section" id="s7">
+          <div class="legal-section-header">
+            <div class="legal-section-num">07</div>
+            <div class="legal-section-icon" style="background:rgba(255,107,43,.08);border:1px solid rgba(255,107,43,.2)">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+            </div>
+            <h2 class="legal-section-title">Your Rights</h2>
+          </div>
+          <p>As a visitor, you have the following rights regarding your data:</p>
+          <ul>
+            <li><strong>Access</strong> — Request a summary of any personal data we hold about you (typically minimal).</li>
+            <li><strong>Correction</strong> — Ask us to correct inaccurate contact form data.</li>
+            <li><strong>Deletion</strong> — Request deletion of contact form submissions and any data associated with your inquiry.</li>
+            <li><strong>Opt-Out of Analytics</strong> — Decline analytics cookies using our cookie consent banner, or install the <a href="https://tools.google.com/dlpage/gaoptout" rel="nofollow noopener" target="_blank">Google Analytics Opt-Out Browser Add-On</a>.</li>
+            <li><strong>Data Portability</strong> — Request a copy of contact data you submitted in a machine-readable format.</li>
+          </ul>
+          <p>To exercise any of these rights, contact us at <a href="mailto:privacy@capcutmodindia.in">privacy@capcutmodindia.in</a>. We will respond within 30 days.</p>
+        </div>
+
+        <div class="legal-section" id="s8">
+          <div class="legal-section-header">
+            <div class="legal-section-num">08</div>
+            <div class="legal-section-icon" style="background:rgba(124,58,237,.08);border:1px solid rgba(124,58,237,.25)">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.82"/></svg>
+            </div>
+            <h2 class="legal-section-title">Contact &amp; Updates</h2>
+          </div>
+          <p>For privacy-related questions, data requests, or concerns, contact us:</p>
+          <div class="info-box">
+            <svg class="info-box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <p>Email: <a href="mailto:privacy@capcutmodindia.in">privacy@capcutmodindia.in</a><br>Response time: within 30 business days.<br>Website: <a href="https://capcutmodindia.in">capcutmodindia.in</a></p>
+          </div>
+          <p>We may update this Privacy Policy periodically. Material changes will be announced via a notice on the homepage. The "Last Updated" date at the top of this page will always reflect the most recent revision. Continued use of the site after changes constitutes acceptance of the revised policy.</p>
+        </div>
+
+      </article>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-logo">
+          <div class="nav-logo-icon" style="width:32px;height:32px"><svg viewBox="0 0 24 24" style="width:17px;height:17px" fill="#fff"><path d="M15 10l-9 5V5l9 5zm0 0l4-4v8l-4-4z"/></svg></div>
+          <span style="font-family:var(--font-display);font-size:20px">CapCut <span class="cyan">MOD India</span></span>
+        </div>
+        <p class="footer-desc">India's most trusted source for CapCut Mod APK. Every release is scanned across 72 engines before publishing.</p>
+        <div class="footer-social">
+          <a href="#" class="footer-social-link" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.41 19.1C5.12 19.56 12 19.56 12 19.56s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 11.75a29 29 0 00-.46-5.33z"/><polygon points="9.75,15.02 15.5,11.75 9.75,8.48 9.75,15.02" fill="#000"/></svg></a>
+          <a href="#" class="footer-social-link" aria-label="Telegram"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.96 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Quick Links</div>
+        <nav class="footer-links">
+          <a href="index.html#features">Features</a>
+          <a href="index.html#download">Download APK</a>
+          <a href="index.html#install">Install Guide</a>
+          <a href="index.html#faq">FAQ</a>
+        </nav>
+      </div>
+      <div>
+        <div class="footer-col-title">Legal</div>
+        <nav class="footer-links">
+          <a href="privacy-policy.html" class="active-link">Privacy Policy</a>
+          <a href="terms-of-use.html">Terms of Use</a>
+          <a href="dmca-notice.html">DMCA Notice</a>
+          <a href="disclaimer.html">Disclaimer</a>
+          <a href="contact-us.html">Contact Us</a>
+        </nav>
+      </div>
+      <div>
+        <div class="footer-col-title">Other Pages</div>
+        <nav class="footer-links">
+          <a href="terms-of-use.html">Terms of Use</a>
+          <a href="dmca-notice.html">DMCA Notice</a>
+          <a href="disclaimer.html">Disclaimer</a>
+          <a href="contact-us.html">Contact Us</a>
+        </nav>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-disclaimer"><strong>Disclaimer:</strong> This website is not affiliated with ByteDance Pte. Ltd. or the official CapCut application. "CapCut" is a trademark of ByteDance. All content is for personal and educational use only.</p>
+      <p class="footer-copy">© 2025 CapCutModIndia.in<br>Made with ❤️ for 🇮🇳 Creators</p>
+    </div>
+  </div>
+</footer>
+
+<!-- SCROLL TOP -->
+<button id="sttBtn" aria-label="Back to top">
+  <span class="stt-ring"></span><span class="stt-ring-inner"></span>
+  <span class="stt-face"></span>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"><polyline points="18,15 12,9 6,15"/></svg>
+</button>
+
+<script>
+/* Nav */
+window.addEventListener('scroll',function(){document.getElementById('nav').classList.toggle('scrolled',window.scrollY>50)});
+function toggleMenu(){var m=document.getElementById('mobileMenu'),o=document.getElementById('menuOverlay'),b=document.getElementById('navHamburger');if(m.classList.contains('open')){closeMenu()}else{m.classList.add('open');o.classList.add('open');b.classList.add('active');b.setAttribute('aria-expanded','true');document.body.style.overflow='hidden'}}
+function closeMenu(){var m=document.getElementById('mobileMenu'),o=document.getElementById('menuOverlay'),b=document.getElementById('navHamburger');m.classList.remove('open');o.classList.remove('open');b.classList.remove('active');b.setAttribute('aria-expanded','false');document.body.style.overflow=''}
+/* Scroll top */
+(function(){var btn=document.getElementById('sttBtn'),ring=btn&&btn.querySelector('.stt-ring');if(!btn)return;function u(){var s=window.scrollY,t=document.documentElement.scrollHeight-window.innerHeight,p=t>0?s/t*100:0;btn.classList.toggle('visible',s>300);if(ring)ring.style.setProperty('--scroll-pct',p.toFixed(1))}window.addEventListener('scroll',u,{passive:true});u();btn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})})})();
+/* TOC active */
+(function(){var links=document.querySelectorAll('.legal-toc-list a'),sections=document.querySelectorAll('.legal-section');function setActive(){var scroll=window.scrollY+120;sections.forEach(function(s,i){if(s.offsetTop<=scroll){links.forEach(function(l){l.classList.remove('active')});if(links[i])links[i].classList.add('active')}})}window.addEventListener('scroll',setActive,{passive:true});setActive()})();
+</script>
+</body>
+</html>
