@@ -4611,17 +4611,6 @@ if (dlBtn) {
 /* ═══════════════════════════════════════
    SCROLL TO TOP
 ═══════════════════════════════════════ */
-// (function(){
-//   var btn=document.getElementById('scrollTopBtn'),ring=btn?btn.querySelector('.stt-ring'):null;
-//   if(!btn)return;
-//   function update(){
-//     var s=window.scrollY,t=document.documentElement.scrollHeight-window.innerHeight,p=t>0?(s/t)*100:0;
-//     btn.classList.toggle('visible',s>300);
-//     if(ring)ring.style.setProperty('--scroll-pct',p.toFixed(1));
-//   }
-//   window.addEventListener('scroll',update,{passive:true});update();
-//   btn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
-// }());
 
 (function(){
   var btn=document.getElementById('scrollTopBtn'),ring=btn?btn.querySelector('.stt-ring'):null;
