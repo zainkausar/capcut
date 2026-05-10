@@ -1805,7 +1805,7 @@ pre, code { overflow-x: auto; }
 /* ═══════════════════════════════════════
    SCROLL TO TOP BUTTON
 ═══════════════════════════════════════ */
-#scrollTopBtn {
+/* #scrollTopBtn {
   position: fixed;
   bottom: 92px;
   right: 20px;
@@ -1830,9 +1830,9 @@ pre, code { overflow-x: auto; }
   opacity: 1;
   visibility: visible;
   transform: translateY(0) scale(1);
-}
+} */
 /* Glassmorphism face */
-#scrollTopBtn .stt-face {
+/* #scrollTopBtn .stt-face {
   position: absolute; inset: 0;
   border-radius: 16px;
   background: linear-gradient(145deg, rgba(0,240,255,0.12) 0%, rgba(124,58,237,0.1) 100%);
@@ -1854,9 +1854,9 @@ pre, code { overflow-x: auto; }
 }
 #scrollTopBtn:active .stt-face {
   box-shadow: 0 2px 10px rgba(0,0,0,0.5);
-}
+} */
 /* Conic progress ring */
-#scrollTopBtn .stt-ring {
+/* #scrollTopBtn .stt-ring {
   position: absolute;
   inset: -4px;
   border-radius: 20px;
@@ -1872,9 +1872,9 @@ pre, code { overflow-x: auto; }
   border-radius: 14px;
   background: var(--bg2);
   z-index: -1;
-}
+} */
 /* Arrow icon */
-#scrollTopBtn svg {
+/* #scrollTopBtn svg {
   position: absolute; inset: 0;
   margin: auto;
   width: 22px; height: 22px;
@@ -1886,9 +1886,9 @@ pre, code { overflow-x: auto; }
   transform: translateY(-3px);
   filter: drop-shadow(0 0 10px rgba(0,240,255,0.8));
 }
-#scrollTopBtn:active svg { transform: translateY(0); }
+#scrollTopBtn:active svg { transform: translateY(0); } */
 /* Tooltip */
-#scrollTopBtn::before {
+/* #scrollTopBtn::before {
   content: 'Back to top';
   position: absolute;
   right: calc(100% + 10px);
@@ -1907,20 +1907,85 @@ pre, code { overflow-x: auto; }
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.2s, transform 0.2s;
-}
-#scrollTopBtn:hover::before {
+} */
+/* #scrollTopBtn:hover::before {
   opacity: 1;
   transform: translateY(-50%) translateX(0);
-}
-@media (min-width: 769px) {
+} */
+/* @media (min-width: 769px) {
   #scrollTopBtn { bottom: 32px; right: 30px; }
-}
-@media (max-width: 480px) {
+} */
+/* @media (max-width: 480px) {
   #scrollTopBtn { bottom: 84px; right: 14px; width: 46px; height: 46px; border-radius: 13px; }
   #scrollTopBtn .stt-face { border-radius: 13px; }
   #scrollTopBtn::before { display: none; }
-}
+} */
 
+#scrollTopBtn{
+  position:fixed;
+  bottom:28px;
+  right:24px;
+  width:50px;
+  height:50px;
+  border-radius:16px;
+  background:none;
+  border:none;
+  cursor:pointer;
+  z-index:900;
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(16px) scale(.8);
+  transition:opacity .4s cubic-bezier(.34,1.56,.64,1),visibility .4s ease,transform .4s cubic-bezier(.34,1.56,.64,1);outline:none
+}
+#scrollTopBtn.visible{
+  opacity:1;
+  visibility:visible;
+  transform:translateY(0) scale(1);
+}
+#scrollTopBtn .stt-face{
+  position:absolute;
+  inset:0;
+  border-radius:16px;
+  background:linear-gradient(145deg,rgba(0,240,255,.12) 0%,rgba(124,58,237,.1) 100%);
+  border:1px solid rgba(0,240,255,.25);
+  backdrop-filter:blur(12px);
+  box-shadow:0 4px 24px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.08);
+  transition:all .25s;
+}
+#scrollTopBtn:hover .stt-face{
+  background:linear-gradient(145deg,rgba(0,240,255,.18) 0%,rgba(124,58,237,.15) 100%);
+  border-color:rgba(0,240,255,.55);
+  box-shadow:0 8px 32px rgba(0,0,0,.55),0 0 24px rgba(0,240,255,.2),inset 0 1px 0 rgba(255,255,255,.12);
+}
+#scrollTopBtn .stt-ring{
+  position:absolute;
+  inset:-4px;
+  border-radius:20px;
+  background:conic-gradient(var(--cyan) calc(var(--scroll-pct,0) * 1%),transparent 0%);
+  z-index:-1;
+}
+#scrollTopBtn .stt-ring-inner{
+  position:absolute;
+  inset:2px;
+  border-radius:14px;
+  background:var(--bg2);
+  z-index:-1;
+}
+#scrollTopBtn svg{
+  position:absolute;
+  inset:0;
+  margin:auto;
+  width:22px;
+  height:22px;
+  color:var(--cyan);
+  filter:drop-shadow(0 0 6px rgba(0,240,255,.5));
+  transition:transform .25s cubic-bezier(.34,1.56,.64,1),filter .2s;
+}
+#scrollTopBtn:hover svg{
+  transform:translateY(-3px);
+  filter:drop-shadow(0 0 10px rgba(0,240,255,.8))
+}
+  
 /* ═══════════════════════════════════════
    COOKIE CONSENT BANNER
 ═══════════════════════════════════════ */
@@ -4448,7 +4513,7 @@ pre, code { overflow-x: auto; }
 <!-- ══════════════════════════════════════
      SCROLL TO TOP BUTTON
 ══════════════════════════════════════ -->
-<button id="scrollTopBtn" aria-label="Scroll back to top">
+<!-- <button id="scrollTopBtn" aria-label="Scroll back to top">
   <span class="stt-ring"  aria-hidden="true"></span>
   <span class="stt-ring-inner" aria-hidden="true"></span>
   <span class="stt-face"  aria-hidden="true"></span>
@@ -4456,6 +4521,13 @@ pre, code { overflow-x: auto; }
        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
     <polyline points="18,15 12,9 6,15"/>
   </svg>
+</button> -->
+
+<button id="scrollTopBtn" aria-label="Scroll back to top">
+  <span class="stt-ring" aria-hidden="true"></span>
+  <span class="stt-ring-inner" aria-hidden="true"></span>
+  <span class="stt-face" aria-hidden="true"></span>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18,15 12,9 6,15"/></svg>
 </button>
 
 <!-- ══════════════════════════════════════
