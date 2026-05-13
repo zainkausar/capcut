@@ -887,7 +887,7 @@ button { cursor: pointer; font-family: var(--font-body); }
    SCROLL TO TOP
 ═══════════════════════════════════════════ */
 #scrollTopBtn {
-  position: fixed; bottom: 22px; right: 16px; z-index: 900;
+  position: fixed; bottom: 100px; right: 16px; z-index: 900;
   width: 44px; height: 44px; border-radius: 12px;
   background: rgba(8,15,26,0.85); border: 1px solid var(--border-accent);
   backdrop-filter: blur(12px); display: flex; align-items: center; justify-content: center;
@@ -988,6 +988,18 @@ button { cursor: pointer; font-family: var(--font-body); }
   .share-btn { width: 100%; justify-content: center; }
   .post-meta-top { flex-wrap: wrap; gap: 7px; }
   .breadcrumb { gap: 5px; font-size: 11px; }
+}
+/* MOBILE STICKY */
+.mobile-sticky {
+  display: none;
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 998;
+  background: rgba(4,8,15,0.97); border-top: 1px solid var(--border);
+  padding: 10px 16px 10px; backdrop-filter: blur(12px);
+  safe-area-inset-bottom: env(safe-area-inset-bottom);
+}
+@media (max-width: 768px) {
+  .mobile-sticky { display: block; }
+  body { padding-bottom: 68px; }
 }
 </style>
 </head>
@@ -1698,6 +1710,14 @@ button { cursor: pointer; font-family: var(--font-body); }
     </div>
   </div>
 </footer>
+
+<!-- Mobile Sticky Download -->
+<div class="mobile-sticky" role="complementary" aria-label="Mobile download button">
+  <a href="#download" class="btn-primary" style="width:100%;justify-content:center;font-size:15px;padding:14px" aria-label="Download CapCut Mod APK free">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    Download Free APK — v18.5.2
+  </a>
+</div>
 
 <!-- SCROLL TO TOP -->
 <button id="scrollTopBtn" aria-label="Scroll to top">
