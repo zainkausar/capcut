@@ -387,9 +387,24 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:52px 0 3
 @media(min-width:769px){
   #sttBtn{bottom:32px;right:30px}
 }
+
+/* ═══════════════════════════════════════════
+   PROGRESS BAR
+═══════════════════════════════════════════ */
+#readProgress {
+  position: fixed; top: 0; left: 0; z-index: 1000;
+  height: 3px; width: 0%;
+  background: linear-gradient(90deg, var(--cyan), var(--purple), var(--orange));
+  transition: width 0.1s linear;
+  box-shadow: 0 0 10px rgba(0,240,255,0.6);
+}
+   
 </style>
 </head>
 <body>
+
+<!-- READ PROGRESS BAR -->
+<div id="readProgress"></div>
 
 <!-- ══════════════════════════════════
      NAV
@@ -1228,6 +1243,17 @@ document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('keyd
 
 // Scroll top
 (function(){var btn=document.getElementById('sttBtn'),ring=btn&&btn.querySelector('.stt-ring');if(!btn)return;function u(){var s=window.scrollY,t=document.documentElement.scrollHeight-window.innerHeight,p=t>0?s/t*100:0;btn.classList.toggle('visible',s>300);if(ring)ring.style.setProperty('--scroll-pct',p.toFixed(1))}window.addEventListener('scroll',u,{passive:true});u();btn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});btn.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();window.scrollTo({top:0,behavior:'smooth'})}})})();
+
+/* ── READ PROGRESS BAR ── */
+(function () {
+  const bar = document.getElementById('readProgress');
+  function update() {
+    const scrollTop = window.scrollY;
+    const docH = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = docH > 0 ? (scrollTop / docH * 100).toFixed(1) + '%' : '0%';
+  }
+  window.addEventListener('scroll', update, { passive: true });
+})();
 </script>
 </body>
 </html>
