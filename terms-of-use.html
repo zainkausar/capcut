@@ -535,12 +535,27 @@ footer {
 font-size:50px;
 }
 
+/* ═══════════════════════════════════════════
+   PROGRESS BAR
+═══════════════════════════════════════════ */
+#readProgress {
+  position: fixed; top: 0; left: 0; z-index: 1000;
+  height: 3px; width: 0%;
+  background: linear-gradient(90deg, var(--cyan), var(--purple), var(--orange));
+  transition: width 0.1s linear;
+  box-shadow: 0 0 10px rgba(0,240,255,0.6);
+}
+
 </style>
 <title>Terms of Use | CapCut Mod India</title>
 <meta name="description" content="Read the Terms of Use for CapCutModIndia.in. Understand your rights and responsibilities when downloading and using CapCut Mod APK.">
 <link rel="canonical" href="https://capcutmodindia.in/terms-of-use.html">
 </head>
 <body>
+
+<!-- READ PROGRESS BAR -->
+<div id="readProgress"></div>
+
 <nav id="nav" role="navigation" aria-label="Main Navigation">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo" aria-label="CapCut Mod India Home">
@@ -1161,6 +1176,16 @@ function closeMenu(){
   init();
 }());
 
+/* ── READ PROGRESS BAR ── */
+(function () {
+  const bar = document.getElementById('readProgress');
+  function update() {
+    const scrollTop = window.scrollY;
+    const docH = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = docH > 0 ? (scrollTop / docH * 100).toFixed(1) + '%' : '0%';
+  }
+  window.addEventListener('scroll', update, { passive: true });
+})();
 </script>
 </body>
 </html>
