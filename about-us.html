@@ -623,9 +623,21 @@ footer {
 font-size:50px;
 }
 
+/* ═══════════════════════════════════════════
+   PROGRESS BAR
+═══════════════════════════════════════════ */
+#readProgress {
+  position: fixed; top: 0; left: 0; z-index: 1000;
+  height: 3px; width: 0%;
+  background: linear-gradient(90deg, var(--cyan), var(--purple), var(--orange));
+  transition: width 0.1s linear;
+  box-shadow: 0 0 10px rgba(0,240,255,0.6);
+}
 </style>
 </head>
 <body>
+<!-- READ PROGRESS BAR -->
+<div id="readProgress"></div>
 
 <!-- NAV -->
 <nav id="nav" role="navigation" aria-label="Main Navigation">
@@ -1498,6 +1510,16 @@ document.querySelectorAll('.about-stat-card,.mission-card,.value-card,.team-card
   init();
 }());
 
+/* ── READ PROGRESS BAR ── */
+(function () {
+  const bar = document.getElementById('readProgress');
+  function update() {
+    const scrollTop = window.scrollY;
+    const docH = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = docH > 0 ? (scrollTop / docH * 100).toFixed(1) + '%' : '0%';
+  }
+  window.addEventListener('scroll', update, { passive: true });
+})();
 </script>
 </body>
 </html>
