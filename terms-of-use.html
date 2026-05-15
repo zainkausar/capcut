@@ -546,6 +546,16 @@ font-size:50px;
   box-shadow: 0 0 10px rgba(0,240,255,0.6);
 }
 
+/* SCROLL TOP */
+#sttBtn{position:fixed;bottom:100px;right:20px;z-index:995;width:50px;height:50px;border-radius:15px;background:none;border:none;cursor:pointer;padding:0;opacity:0;visibility:hidden;transform:translateY(16px) scale(.8);transition:opacity .4s cubic-bezier(.34,1.56,.64,1),visibility .4s,transform .4s cubic-bezier(.34,1.56,.64,1);outline:none;-webkit-tap-highlight-color:transparent}
+#sttBtn.visible{opacity:1;visibility:visible;transform:translateY(0) scale(1)}
+#sttBtn .stt-face{position:absolute;inset:0;border-radius:15px;background:linear-gradient(145deg,rgba(124,58,237,.15),rgba(0,240,255,.1));border:1px solid rgba(0,240,255,.25);box-shadow:0 4px 24px rgba(0,0,0,.5);transition:border-color .25s,box-shadow .25s}
+#sttBtn:hover .stt-face{border-color:rgba(0,240,255,.55);box-shadow:0 8px 32px rgba(0,0,0,.55),0 0 24px rgba(124,58,237,.25)}
+#sttBtn .stt-ring{position:absolute;inset:-4px;border-radius:19px;background:conic-gradient(var(--cyan) calc(var(--scroll-pct,0)*1%),transparent 0%);z-index:-1}
+#sttBtn .stt-ring-inner{position:absolute;inset:2px;border-radius:13px;background:var(--bg2);z-index:-1}
+#sttBtn svg{position:absolute;inset:0;margin:auto;width:22px;height:22px;color:var(--cyan);filter:drop-shadow(0 0 6px rgba(0,240,255,.5));transition:transform .25s cubic-bezier(.34,1.56,.64,1)}
+#sttBtn:hover svg{transform:translateY(-3px)}
+
 </style>
 <title>Terms of Use | CapCut Mod India</title>
 <meta name="description" content="Read the Terms of Use for CapCutModIndia.in. Understand your rights and responsibilities when downloading and using CapCut Mod APK.">
@@ -943,6 +953,13 @@ font-size:50px;
   </div>
 </footer>
 
+<!-- SCROLL TOP -->
+<button id="sttBtn" aria-label="Back to top">
+  <!-- <span class="stt-ring"></span><span class="stt-ring-inner"></span> -->
+  <span class="stt-face"></span>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="18,15 12,9 6,15"/></svg>
+</button>
+
 <!-- Mobile Sticky Download -->
 <div class="mobile-sticky" role="complementary" aria-label="Mobile download button">
   <a href="#download" class="btn-primary" style="width:100%;justify-content:center;font-size:15px;padding:14px" aria-label="Download CapCut Mod APK free">
@@ -1186,6 +1203,11 @@ function closeMenu(){
   }
   window.addEventListener('scroll', update, { passive: true });
 })();
+
+// Scroll top
+(function(){var btn=document.getElementById('sttBtn'),ring=btn&&btn.querySelector('.stt-ring');if(!btn)return;function u(){var s=window.scrollY,t=document.documentElement.scrollHeight-window.innerHeight,p=t>0?s/t*100:0;btn.classList.toggle('visible',s>300);if(ring)ring.style.setProperty('--scroll-pct',p.toFixed(1))}window.addEventListener('scroll',u,{passive:true});u();btn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});btn.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();window.scrollTo({top:0,behavior:'smooth'})}})})();
+
+
 </script>
 </body>
 </html>
