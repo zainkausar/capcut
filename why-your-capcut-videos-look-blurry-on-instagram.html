@@ -1307,8 +1307,34 @@ footer {
         <article class="post-body">
 
           <!-- INTRO PARA -->
-          <p>{{POST_INTRO_PARAGRAPH_1}}</p>
-          <p>{{POST_INTRO_PARAGRAPH_2}}</p>
+          <h2>This Single Setting Destroyed Months of My Content Quality</h2>
+          <p>I spent six months making Reels before I realized a single export setting was making every single video I posted look worse than it looked on my phone.</p>
+          <p>The frustration of this problem is specific: you edit a video, it looks sharp and clean in CapCut's preview. You export it, it looks fine in your gallery. You post it to Instagram, and it comes out soft, slightly compressed, and noticeably worse than the original.</p>
+          <p>You blame your phone camera. You try filming in better light. You experiment with different filters. None of it helps, because none of it is the actual problem.</p>
+          <p>The actual problem has nothing to do with your camera or your lighting.</p>
+
+           <!-- SECTION 1 -->
+          <h2 id="section-1">Why Instagram Makes Videos Look Blurry</h2>
+          <p>Instagram compresses every video that gets uploaded to its servers. This is non-negotiable — they do it to manage storage and bandwidth costs across billions of uploads per day.</p>
+          <p>The compression algorithm they use is lossy, meaning it discards visual information to reduce file size. How aggressively it compresses depends on two things: the resolution and bitrate of the video you uploaded, and how their servers decide to process it.</p>
+          <p>Here is the critical insight: Instagram's compression causes less visible degradation on videos that were exported at higher quality settings to begin with. A highly compressed source video gets double-compressed — once by you, once by Instagram. A high-quality source video gets compressed once by Instagram's servers and the result looks significantly better.</p>
+          <p>The solution is not to fight Instagram's compression. It is to upload a source file so good that even after Instagram's compression, it still looks sharp.</p>
+          
+          <!-- SECTION 2 -->
+          <h2 id="section-2">The Exact CapCut Export Settings for Instagram Reels</h2>
+          <p>Here are the settings that produce the best result after Instagram's compression for vertical Reels content.</p>
+          <b>Resolution:</b>
+           <p>1080p minimum. 4K is better but requires Instagram's servers to be in a good mood and your connection to be fast. For most Indian creators, 1080p exported at correct bitrate will beat 4K exported with wrong settings every time.</p>
+           <b>Frame rate:</b>
+           <p>30fps for most content. 60fps for dance, sports, or any content with fast movement. Instagram supports 60fps and it makes a visible difference for high-motion content.</p>
+           <b>Format:</b>
+           <p>MP4 (H.264). Not H.265/HEVC even though it produces smaller files at the same quality — Instagram's compression pipeline handles H.264 more predictably.</p>
+           <b>Bit rate:</b>
+           <p>In CapCut, go to export settings and look for "Bitrate" or "Quality" slider. Set to the highest available option. Do not compress during export — let Instagram do the only compression.</p>
+           <b>Aspect ratio:</b>
+           <p>9:16 natively. If you export at 16:9 and Instagram converts it, you add another processing step that degrades quality. Edit in 9:16 from the start.</p>
+
+           
 
           <!-- CALLOUT: INFO -->
           <div class="callout callout-info">
@@ -1319,10 +1345,7 @@ footer {
             </div>
           </div>
 
-          <!-- SECTION 1 -->
-          <h2 id="section-1">{{SECTION_1_TITLE}}</h2>
-          <p>{{SECTION_1_PARA_1}}</p>
-          <p>{{SECTION_1_PARA_2}}</p>
+          
 
           <!-- FEATURE GRID -->
           <div class="feat-grid">
