@@ -851,37 +851,51 @@ button { cursor: pointer; font-family: var(--font-body); }
 /* ═══════════════════════════════════════════
    FOOTER
 ═══════════════════════════════════════════ */
-#footer {
+footer {
   background: var(--bg2);
   border-top: 1px solid var(--border);
-  padding: 40px 0 24px;
+  padding: 50px 0 30px;
 }
-.footer-top {
-  display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr;
-  gap: 32px; margin-bottom: 32px;
+.footer-grid {
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px; margin-bottom: 40px;
 }
-.footer-brand { }
-.footer-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
-.footer-logo-icon {
-  width: 34px; height: 34px; border-radius: 10px;
-  background: linear-gradient(135deg, var(--cyan), var(--purple));
+.footer-brand-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.footer-desc { font-size: 13px; color: var(--muted); line-height: 1.7; max-width: 280px; margin-bottom: 16px; }
+.footer-social { display: flex; gap: 10px; }
+.footer-social-link {
+  width: 34px; height: 34px; border-radius: 8px;
+  background: rgba(255,255,255,0.05); border: 1px solid var(--border);
   display: flex; align-items: center; justify-content: center;
+  transition: all 0.2s;
 }
-.footer-logo-icon svg { width: 18px; height: 18px; fill: #fff; }
-.footer-logo-text { font-family: var(--font-display); font-size: 22px; letter-spacing: 0.05em; }
-.footer-tagline { font-size: 13px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; max-width: 240px; }
-.footer-col-title { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--cyan); margin-bottom: 14px; }
-.footer-links { list-style: none; display: flex; flex-direction: column; gap: 9px; }
-.footer-links li a { font-size: 13px; color: var(--muted); transition: color 0.2s; }
-.footer-links li a:hover { color: var(--text); }
+.footer-social-link:hover { border-color: var(--cyan); color: var(--cyan); }
+.footer-col-title { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
+.footer-links { display: flex; flex-direction: column; gap: 8px; }
+.footer-links a { font-size: 13px; color: var(--muted); transition: color 0.2s; }
+.footer-links a:hover { color: var(--text); }
 .footer-bottom {
-  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;
-  padding-top: 20px; border-top: 1px solid var(--border);
-  font-size: 12px; color: var(--muted2);
+  display: flex; justify-content: space-between; align-items: flex-start; gap: 20px;
+  padding-top: 28px; border-top: 1px solid var(--border);
 }
-.footer-bottom-links { display: flex; gap: 16px; flex-wrap: wrap; }
-.footer-bottom-links a { color: var(--muted2); transition: color 0.2s; }
-.footer-bottom-links a:hover { color: var(--text); }
+.footer-disclaimer {
+  font-size: 11px; color: var(--muted2); line-height: 1.7;
+  /* max-width: 700px; */
+}
+.footer-copy { font-size: 12px; color: var(--muted2); white-space: nowrap; }
+
+/* MOBILE STICKY */
+.mobile-sticky {
+  display: none;
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 998;
+  background: rgba(4,8,15,0.97); border-top: 1px solid var(--border);
+  padding: 10px 16px 10px; backdrop-filter: blur(12px);
+  safe-area-inset-bottom: env(safe-area-inset-bottom);
+}
+@media (max-width: 768px) {
+  .mobile-sticky { display: block; }
+  body { padding-bottom: 68px; }
+}
 
 /* ═══════════════════════════════════════════
    SCROLL TO TOP
@@ -1417,19 +1431,9 @@ button { cursor: pointer; font-family: var(--font-body); }
 
         </article>
         <!-- END ARTICLE BODY -->
-
-        <!-- TAGS -->
-        <div class="post-tags">
-          <a href="/blog/tag/capcut-mod/" class="post-tag">capcut mod</a>
-          <a href="/blog/tag/android/" class="post-tag">android</a>
-          <a href="/blog/tag/india/" class="post-tag">india</a>
-          <a href="/blog/tag/reels/" class="post-tag">reels</a>
-          <a href="/blog/tag/no-watermark/" class="post-tag">no watermark</a>
-          <!-- Add more tags as needed -->
-        </div>
         <!-- AUTHOR BOX -->
         <div class="post-author-box">
-          <div class="post-author-avatar">C</div>
+          <div class="post-author-avatar"><img src="aarav-capcut-mod-apk-author.jpg" alt="Aarav - Capcut Mod Apk Author"></div>
           <div class="post-author-info">
             <div class="post-author-name"><a href="https://capcut-5zx.pages.dev/author-aarav">Aarav</a></div>
             <div class="post-author-role">Founder · Free CapCut Mod Apk</div>
