@@ -9,9 +9,8 @@
 <title>{{POST_TITLE}} | CapCut Mod India</title>
 <link rel="icon" type="image/x-icon" href="capcut-favicon.ico">
 <meta name="description" content="{{POST_META_DESCRIPTION}}">
-<meta name="keywords" content="capcut mod apk, {{POST_KEYWORDS}}">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-<meta name="author" content="CapCutModIndia Editorial Team">
+<meta name="author" content="Aarav">
 <meta name="geo.region" content="IN">
 <meta name="geo.placename" content="India">
 <meta name="language" content="English">
@@ -22,63 +21,17 @@
 <meta property="og:title" content="{{POST_TITLE}}">
 <meta property="og:description" content="{{POST_META_DESCRIPTION}}">
 <meta property="og:url" content="https://capcutmodindia.in/blog/{{POST_SLUG}}/">
-<meta property="og:site_name" content="CapCut Mod India">
+<meta property="og:site_name" content="Free CapCut Mod Apk">
 <meta property="og:locale" content="en_IN">
-<meta property="og:image" content="https://capcutmodindia.in/images/{{POST_SLUG}}-og.jpg">
+<meta property="og:image" content="CapCut-Mod-Apk.svg">
 <meta property="article:published_time" content="{{POST_DATE_ISO}}">
-<meta property="article:author" content="CapCutModIndia Editorial Team">
-<meta property="article:section" content="{{POST_CATEGORY}}">
+<meta property="article:author" content="Aarav">
 
 <!-- ═══ TWITTER CARD ═══ -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{POST_TITLE}}">
 <meta name="twitter:description" content="{{POST_META_DESCRIPTION}}">
 <meta name="twitter:image" content="https://capcutmodindia.in/images/{{POST_SLUG}}-og.jpg">
-
-<!-- ═══ JSON-LD STRUCTURED DATA ═══ -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "{{POST_TITLE}}",
-  "description": "{{POST_META_DESCRIPTION}}",
-  "author": {
-    "@type": "Organization",
-    "name": "CapCut Mod India",
-    "url": "https://capcutmodindia.in"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "CapCut Mod India",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://capcutmodindia.in/capcut-favicon.ico"
-    }
-  },
-  "datePublished": "{{POST_DATE_ISO}}",
-  "dateModified": "{{POST_MODIFIED_ISO}}",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://capcutmodindia.in/blog/{{POST_SLUG}}/"
-  },
-  "image": "https://capcutmodindia.in/images/{{POST_SLUG}}-og.jpg",
-  "inLanguage": "en-IN",
-  "keywords": "{{POST_KEYWORDS}}"
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://capcutmodindia.in/"},
-    {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://capcutmodindia.in/blog/"},
-    {"@type": "ListItem", "position": 3, "name": "{{POST_TITLE}}", "item": "https://capcutmodindia.in/blog/{{POST_SLUG}}/"}
-  ]
-}
-</script>
-
 <!-- ═══ FONTS ═══ -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -120,7 +73,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 a { color: inherit; text-decoration: none; }
-img { max-width: 100%; display: block; border-radius:100px;}
+img { max-width: 100%; display: block; }
 button { cursor: pointer; font-family: var(--font-body); }
 
 /* ═══════════════════════════════════════════
@@ -190,7 +143,7 @@ button { cursor: pointer; font-family: var(--font-body); }
 /* ═══════════════════════════════════════════
    NAV
 ═══════════════════════════════════════════ */
-#nav {
+/* #nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 999;
   transition: all 0.3s ease;
   padding: 14px 0;
@@ -299,6 +252,149 @@ button { cursor: pointer; font-family: var(--font-body); }
 .nav-mobile-footer { padding: 16px 20px 28px; border-top: 1px solid var(--border); }
 .nav-mobile-footer .btn-primary { width: 100%; justify-content: center; border-radius: 12px; }
 .nav-mobile-footer-trust { display: flex; justify-content: center; gap: 12px; margin-top: 12px; font-size: 11px; color: var(--muted2); }
+.nav-mobile-footer-trust span { display: flex; align-items: center; gap: 4px; } */
+
+/* ═══════════════════════════════════════════
+   NAV
+═══════════════════════════════════════════ */
+#nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+  transition: all 0.3s ease;
+  padding: 16px 0;
+}
+#nav.scrolled {
+  background: rgba(4,8,15,0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 0;
+}
+.nav-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  max-width: 1140px; margin: 0 auto; padding: 0 20px;
+}
+.nav-logo { display: flex; align-items: center; gap: 10px; }
+.nav-logo-icon {
+  width: 36px; height: 36px; border-radius: 10px;
+  /* background: linear-gradient(135deg, var(--cyan), var(--purple)); */
+  display: flex; align-items: center; justify-content: center;
+}
+.nav-logo-icon svg { width: 20px; height: 20px; fill: #fff; }
+.nav-logo-text { font-family: var(--font-display); font-size: 30px; letter-spacing: 0.05em; }
+.nav-links { display: flex; align-items: center; gap: 28px; }
+.nav-links a {
+  font-size: 14px; color: var(#ffffff); font-weight: 500;
+  transition: color 0.2s; letter-spacing: 0.02em;
+}
+.nav-links a:hover { color: var(--text); }
+.nav-cta {
+  background: var(--cyan); color: #000;
+  font-size: 13px; font-weight: 700;
+  padding: 9px 20px; border-radius: 8px;
+  transition: all 0.2s;
+}
+.nav-cta:hover { background: var(--cyan2); transform: scale(1.04); }
+.nav-hamburger {
+  display: none;
+  background: none; border: none;
+  width: 40px; height: 40px;
+  cursor: pointer; padding: 0;
+  position: relative; z-index: 1001;
+  flex-direction: column; align-items: center; justify-content: center; gap: 5px;
+}
+.nav-hamburger .hb-line {
+  display: block; height: 2px; border-radius: 2px;
+  background: var(--text);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+}
+.nav-hamburger .hb-line:nth-child(1) { width: 22px; }
+.nav-hamburger .hb-line:nth-child(2) { width: 14px; margin-left: -8px; opacity: 0.6; }
+.nav-hamburger .hb-line:nth-child(3) { width: 18px; }
+.nav-hamburger.active .hb-line:nth-child(1) { width: 20px; transform: translateY(7px) rotate(45deg); }
+.nav-hamburger.active .hb-line:nth-child(2) { width: 0; opacity: 0; }
+.nav-hamburger.active .hb-line:nth-child(3) { width: 20px; transform: translateY(-7px) rotate(-45deg); }
+
+/* MOBILE DRAWER OVERLAY */
+.nav-mobile-overlay {
+  display: none; position: fixed; inset: 0; z-index: 998;
+  background: rgba(4,8,15,0.75); backdrop-filter: blur(6px);
+  opacity: 0; transition: opacity 0.3s ease;
+}
+.nav-mobile-overlay.open { opacity: 1; display: block; }
+
+/* MOBILE DRAWER PANEL */
+.nav-mobile {
+  visibility: hidden;
+  position: fixed; top: 0; right: 0; bottom: 0; z-index: 999;
+  width: min(340px, 90vw);
+  background: linear-gradient(180deg, #080f1a 0%, #04080f 100%);
+  border-left: 1px solid var(--border);
+  transform: translateX(100%);
+  transition: transform 0.38s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.38s;
+  overflow-y: auto;
+  display: flex; flex-direction: column;
+  box-shadow: -20px 0 60px rgba(0,0,0,0.6);
+}
+.nav-mobile.open {
+  transform: translateX(0);
+  visibility: visible;
+}
+.nav-mobile-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 22px 22px 18px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(0,240,255,0.02);
+}
+.nav-mobile-logo { display: flex; align-items: center; gap: 10px; }
+.nav-mobile-logo-icon {
+  width: 34px; height: 34px; border-radius: 10px;
+  background: linear-gradient(135deg, var(--cyan), var(--purple));
+  display: flex; align-items: center; justify-content: center;
+}
+.nav-mobile-logo-icon svg { width: 18px; height: 18px; fill: #fff; }
+.nav-mobile-logo-text { font-family: var(--font-display); font-size: 20px; letter-spacing: 0.05em; }
+.nav-mobile-close {
+  width: 36px; height: 36px; border-radius: 10px;
+  background: rgba(255,255,255,0.06); border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; color: var(--muted); transition: all 0.2s;
+}
+.nav-mobile-close:hover { color: var(--cyan); border-color: rgba(0,240,255,0.4); background: rgba(0,240,255,0.08); }
+.nav-mobile-links {
+  display: flex; flex-direction: column; padding: 12px 0;
+  flex: 1;
+}
+.nav-mobile-link {
+  display: flex; align-items: center; gap: 14px;
+  padding: 15px 22px;
+  font-size: 15px; font-weight: 600; color: var(--muted);
+  transition: all 0.2s; border-left: 3px solid transparent;
+  text-decoration: none; letter-spacing: 0.01em;
+}
+.nav-mobile-link:hover { color: var(--text); background: rgba(255,255,255,0.03); border-left-color: var(--cyan); padding-left: 25px; }
+.nav-mobile-link-icon {
+  width: 38px; height: 38px; border-radius: 10px;
+  background: rgba(255,255,255,0.04); border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  transition: all 0.2s;
+}
+.nav-mobile-link:hover .nav-mobile-link-icon { background: rgba(0,240,255,0.08); border-color: rgba(0,240,255,0.25); }
+.nav-mobile-link-icon svg { width: 16px; height: 16px; }
+.nav-mobile-link-label { flex: 1; }
+.nav-mobile-link-arrow { color: var(--muted2); transition: transform 0.2s; }
+.nav-mobile-link:hover .nav-mobile-link-arrow { transform: translateX(4px); color: var(--cyan); }
+.nav-mobile-divider { height: 1px; background: var(--border); margin: 8px 22px; }
+.nav-mobile-footer {
+  padding: 18px 22px 32px;
+  border-top: 1px solid var(--border);
+  background: rgba(0,240,255,0.015);
+}
+.nav-mobile-footer .btn-primary { width: 100%; justify-content: center; border-radius: 12px; font-size: 15px; padding: 15px 20px; }
+.nav-mobile-footer-trust {
+  display: flex; justify-content: center; gap: 14px; margin-top: 14px;
+  font-size: 11px; color: var(--muted2);
+}
 .nav-mobile-footer-trust span { display: flex; align-items: center; gap: 4px; }
 
 /* ═══════════════════════════════════════════
@@ -468,8 +564,8 @@ button { cursor: pointer; font-family: var(--font-body); }
 }
 .post-body p { margin-bottom: 18px; color: #d0dce8; }
 .post-body p:last-child { margin-bottom: 0; }
-.post-body a { color: var(--black); text-decoration: none; text-underline-offset: 3px; transition: color 0.2s; }
-.post-body a:hover { color: var(--black); }
+.post-body a { color: var(--cyan); text-decoration: underline; text-underline-offset: 3px; transition: color 0.2s; }
+.post-body a:hover { color: var(--cyan2); }
 .post-body strong { color: var(--text); font-weight: 700; }
 .post-body em { color: var(--muted); font-style: italic; }
 .post-body ul, .post-body ol {
@@ -670,6 +766,9 @@ button { cursor: pointer; font-family: var(--font-body); }
   display: flex; align-items: center; justify-content: center;
   font-family: var(--font-display); font-size: 22px; color: #fff;
 }
+.authimg{
+  border-radius:50px;
+}
 .post-author-info { flex: 1; min-width: 0; }
 .post-author-name { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
 .post-author-role { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cyan); margin-bottom: 8px; }
@@ -711,7 +810,7 @@ button { cursor: pointer; font-family: var(--font-body); }
 }
 .sidebar-download-icon {
   width: 48px; height: 48px; border-radius: 14px;
-  /* background: linear-gradient(135deg, var(--cyan), var(--purple)); */
+  background: linear-gradient(135deg, var(--cyan), var(--purple));
   display: flex; align-items: center; justify-content: center;
   margin: 0 auto 14px;
 }
@@ -846,42 +945,8 @@ button { cursor: pointer; font-family: var(--font-body); }
 .post-download-cta-body { flex: 1; min-width: 0; }
 .post-download-cta-body h3 { font-size: 17px; font-weight: 700; margin-bottom: 4px; }
 .post-download-cta-body p { font-size: 13px; color: var(--muted); margin: 0; }
-.post-download-cta .btn-primary { flex-shrink: 0; font-size: 14px; padding: 12px 22px; }
-
-/* ═══════════════════════════════════════════
-   FOOTER
-═══════════════════════════════════════════ */
-/* #footer {
-  background: var(--bg2);
-  border-top: 1px solid var(--border);
-  padding: 40px 0 24px;
-}
-.footer-top {
-  display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr;
-  gap: 32px; margin-bottom: 32px;
-}
-.footer-brand { }
-.footer-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
-.footer-logo-icon {
-  width: 34px; height: 34px; border-radius: 10px;
-  background: linear-gradient(135deg, var(--cyan), var(--purple));
-  display: flex; align-items: center; justify-content: center;
-}
-.footer-logo-icon svg { width: 18px; height: 18px; fill: #fff; }
-.footer-logo-text { font-family: var(--font-display); font-size: 22px; letter-spacing: 0.05em; }
-.footer-tagline { font-size: 13px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; max-width: 240px; }
-.footer-col-title { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--cyan); margin-bottom: 14px; }
-.footer-links { list-style: none; display: flex; flex-direction: column; gap: 9px; }
-.footer-links li a { font-size: 13px; color: var(--muted); transition: color 0.2s; }
-.footer-links li a:hover { color: var(--text); }
-.footer-bottom {
-  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;
-  padding-top: 20px; border-top: 1px solid var(--border);
-  font-size: 12px; color: var(--muted2);
-}
-.footer-bottom-links { display: flex; gap: 16px; flex-wrap: wrap; }
-.footer-bottom-links a { color: var(--muted2); transition: color 0.2s; }
-.footer-bottom-links a:hover { color: var(--text); } */
+.post-download-cta .btn-primary { flex-shrink: 0; color:black; font-size: 14px; padding: 12px 22px; text-decoration:none;}
+.post-download-cta .btn-primary:hover { color:black; }
 
 /* ═══════════════════════════════════════════
    FOOTER
@@ -918,6 +983,19 @@ footer {
   /* max-width: 700px; */
 }
 .footer-copy { font-size: 12px; color: var(--muted2); white-space: nowrap; }
+
+/* MOBILE STICKY */
+.mobile-sticky {
+  display: none;
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 998;
+  background: rgba(4,8,15,0.97); border-top: 1px solid var(--border);
+  padding: 10px 16px 10px; backdrop-filter: blur(12px);
+  safe-area-inset-bottom: env(safe-area-inset-bottom);
+}
+@media (max-width: 768px) {
+  .mobile-sticky { display: block; }
+  body { padding-bottom: 68px; }
+}
 
 /* ═══════════════════════════════════════════
    SCROLL TO TOP
@@ -971,6 +1049,9 @@ footer {
   .post-layout { grid-template-columns: 1fr 260px; gap: 24px; }
   .footer-top { grid-template-columns: 1fr 1fr; gap: 24px; }
   .related-grid { grid-template-columns: repeat(2, 1fr); }
+  /* newly added*/
+  .feat-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 768px) {
   /* NAV */
@@ -1014,28 +1095,22 @@ footer {
 
   /* FOOTER */
   .footer-top { grid-template-columns: 1fr 1fr; gap: 20px; }
-  .footer-bottom { flex-direction: column; text-align: center; }
+  .footer-bottom { flex-direction: column; text-align: left; }
+  /* newly*/
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; }
 }
 @media (max-width: 480px) {
   .post-title { font-size: clamp(22px, 7vw, 30px); }
   .post-info-bar { flex-direction: column; align-items: flex-start; gap: 8px; }
   .footer-top { grid-template-columns: 1fr; }
+  /*newly added*/
+  .footer { padding: 40px 0 24px; }
+  .footer-grid { gap: 28px; }
   .post-share { flex-direction: column; align-items: flex-start; }
   .share-btn { width: 100%; justify-content: center; }
   .post-meta-top { flex-wrap: wrap; gap: 7px; }
   .breadcrumb { gap: 5px; font-size: 11px; }
-}
-/* MOBILE STICKY */
-.mobile-sticky {
-  display: none;
-  position: fixed; bottom: 0; left: 0; right: 0; z-index: 998;
-  background: rgba(4,8,15,0.97); border-top: 1px solid var(--border);
-  padding: 10px 16px 10px; backdrop-filter: blur(12px);
-  safe-area-inset-bottom: env(safe-area-inset-bottom);
-}
-@media (max-width: 768px) {
-  .mobile-sticky { display: block; }
-  body { padding-bottom: 68px; }
 }
 </style>
 </head>
@@ -1043,27 +1118,26 @@ footer {
 
 <!-- READ PROGRESS BAR -->
 <div id="readProgress"></div>
-
-<!-- ═══════════════════════════════════════════
+<!-- ══════════════════════════════════════
      NAV
-═══════════════════════════════════════════ -->
-<nav id="nav" aria-label="Main navigation">
+══════════════════════════════════════ -->
+<nav id="nav" role="navigation" aria-label="Main Navigation">
   <div class="nav-inner">
-    <a href="/" class="nav-logo" aria-label="CapCut Mod India Home">
-      <div class="nav-logo-icon">
-        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+    <a href="#" class="nav-logo" aria-label="CapCut Mod India Home">
+      <div class="nav-logo-icon" aria-hidden="true">
+        <img src="CapCut-Mod-Apk.svg" alt="CapCut Mod Apk Official Logo">
       </div>
-      <span class="nav-logo-text">CAPCUT<span style="color:var(--cyan)">MOD</span></span>
+      <span class="nav-logo-text">CapCut<span class="cyan"> MOD APK</span></span>
     </a>
-    <div class="nav-links" role="navigation">
-      <a href="/">Home</a>
-      <a href="/blog/" class="active" style="color:var(--text)">Blog</a>
-      <a href="/#features">Features</a>
-      <a href="/#how-to">Install</a>
-      <a href="/#faq">FAQ</a>
-      <a href="/#download" class="nav-cta">Free Download</a>
+    <div class="nav-links">
+      <a href="https://capcut-5zx.pages.dev/for-desktop">Desktop</a>
+      <a href="https://capcut-5zx.pages.dev/for-ios">iOS</a>
+      <a href="https://capcut-5zx.pages.dev/capcut-blog">Blog</a>
+      <a href="https://capcut-5zx.pages.dev/about-us">About Us</a>
+      <a href="https://capcut-5zx.pages.dev/disclaimer">Disclaimer</a>
+      <a href="#download" class="nav-cta" aria-label="Download CapCut Mod APK">Free Download</a>
     </div>
-    <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
+    <button class="nav-hamburger" id="navHamburger" onclick="toggleMenu()" aria-label="Toggle mobile menu" aria-expanded="false">
       <span class="hb-line"></span>
       <span class="hb-line"></span>
       <span class="hb-line"></span>
@@ -1071,51 +1145,69 @@ footer {
   </div>
 </nav>
 
-<div class="nav-mobile-overlay" id="navOverlay" onclick="closeNav()"></div>
-<aside class="nav-mobile" id="navMobile" aria-label="Mobile navigation" aria-hidden="true">
+<!-- Mobile overlay -->
+<div class="nav-mobile-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+
+<!-- Mobile Drawer -->
+<div class="nav-mobile" id="mobileMenu" role="dialog" aria-label="Navigation menu">
   <div class="nav-mobile-header">
     <div class="nav-mobile-logo">
-      <div class="nav-mobile-logo-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-      <span class="nav-mobile-logo-text">CAPCUT<span style="color:var(--cyan)">MOD</span></span>
+      <div class="nav-mobile-logo-icon"><img src="CapCut-Mod-Apk.svg" alt="CapCut Mod Apk Official Logo"></div>
+      <span class="nav-mobile-logo-text">CapCut <span class="cyan">MOD APK</span></span>
     </div>
-    <button class="nav-mobile-close" onclick="closeNav()" aria-label="Close menu">
+    <button class="nav-mobile-close" onclick="closeMenu()" aria-label="Close menu">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
     </button>
   </div>
   <nav class="nav-mobile-links">
-    <a href="/" class="nav-mobile-link">
-      <span class="nav-mobile-link-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></span>
-      <span class="nav-mobile-link-label">Home</span>
+    <a href="https://capcut-5zx.pages.dev/for-desktop" class="nav-mobile-link" onclick="closeMenu()">
+      <div class="nav-mobile-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke="#00f0ff" class="bi bi-laptop" viewBox="0 0 16 16">
+  <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5"/></svg></div>
+      <span class="nav-mobile-link-label">Desktop</span>
+      <svg class="nav-mobile-link-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9,18 15,12 9,6"/></svg>
     </a>
-    <a href="/blog/" class="nav-mobile-link active" style="color:var(--text);border-left-color:var(--cyan)">
-      <span class="nav-mobile-link-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></span>
+    <a href="https://capcut-5zx.pages.dev/for-ios" class="nav-mobile-link" onclick="closeMenu()">
+      <div class="nav-mobile-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke="#00f0ff" class="bi bi-apple" viewBox="0 0 16 16">
+  <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516s1.52.087 2.475-1.258.762-2.391.728-2.43m3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422s1.675-2.789 1.698-2.854-.597-.79-1.254-1.157a3.7 3.7 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56s.625 1.924 1.273 2.796c.576.984 1.34 1.667 1.659 1.899s1.219.386 1.843.067c.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758q.52-1.185.473-1.282"/>
+  <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516s1.52.087 2.475-1.258.762-2.391.728-2.43m3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422s1.675-2.789 1.698-2.854-.597-.79-1.254-1.157a3.7 3.7 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56s.625 1.924 1.273 2.796c.576.984 1.34 1.667 1.659 1.899s1.219.386 1.843.067c.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758q.52-1.185.473-1.282"/></svg></div>
+      <span class="nav-mobile-link-label">iOS</span>
+      <svg class="nav-mobile-link-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9,18 15,12 9,6"/></svg>
+    </a>
+    <a href="https://capcut-5zx.pages.dev/capcut-blog" class="nav-mobile-link" onclick="closeMenu()">
+      <div class="nav-mobile-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke="#00f0ff" class="bi bi-file-text" viewBox="0 0 16 16">
+  <path d="M5 4a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5M5 8a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1z"/>
+  <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1"/></svg></div>
       <span class="nav-mobile-link-label">Blog</span>
+      <svg class="nav-mobile-link-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9,18 15,12 9,6"/></svg>
     </a>
-    <a href="/#features" class="nav-mobile-link" onclick="closeNav()">
-      <span class="nav-mobile-link-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
-      <span class="nav-mobile-link-label">Features</span>
+    <div class="nav-mobile-divider"></div>
+    <a href="https://capcut-5zx.pages.dev/about-us" class="nav-mobile-link" onclick="closeMenu()">
+      <div class="nav-mobile-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke="#00f0ff" class="bi bi-info-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+  <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/></svg></div>
+      <span class="nav-mobile-link-label">About Us</span>
+      <svg class="nav-mobile-link-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9,18 15,12 9,6"/></svg>
     </a>
-    <a href="/#how-to" class="nav-mobile-link" onclick="closeNav()">
-      <span class="nav-mobile-link-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
-      <span class="nav-mobile-link-label">Install Guide</span>
-    </a>
-    <a href="/#faq" class="nav-mobile-link" onclick="closeNav()">
-      <span class="nav-mobile-link-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>
-      <span class="nav-mobile-link-label">FAQ</span>
+    <a href="https://capcut-5zx.pages.dev/disclaimer" class="nav-mobile-link" onclick="closeMenu()">
+      <div class="nav-mobile-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke="#00f0ff" class="bi bi-exclamation-triangle" viewBox="0 0 16 16">
+  <path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.15.15 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.2.2 0 0 1-.054.06.1.1 0 0 1-.066.017H1.146a.1.1 0 0 1-.066-.017.2.2 0 0 1-.054-.06.18.18 0 0 1 .002-.183L7.884 2.073a.15.15 0 0 1 .054-.057m1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767z"/>
+  <path d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"/></svg></div>
+      <span class="nav-mobile-link-label">Disclaimer</span>
+      <svg class="nav-mobile-link-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9,18 15,12 9,6"/></svg>
     </a>
   </nav>
   <div class="nav-mobile-footer">
-    <a href="/#download" class="btn-primary" onclick="closeNav()">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-      Free Download APK
+    <a href="/" class="btn-primary" onclick="closeMenu()" style="font-size:14px;padding:13px 20px">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Download Free APK
     </a>
     <div class="nav-mobile-footer-trust">
-      <span>✓ No Watermark</span>
-      <span>✓ 4K Export</span>
-      <span>✓ Safe</span>
+      <span><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#00d68f" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> VirusTotal 72/72</span>
+      <span><svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10" fill="#00d68f" opacity=".15"/><polyline points="9,12 11,14 15,10" stroke="#00d68f" stroke-width="2" fill="none"/></svg> No Root</span>
+      <span>🇮🇳 India Ready</span>
     </div>
   </div>
-</aside>
+</div>
 
 <!-- ═══════════════════════════════════════════
      BREADCRUMB
@@ -1125,11 +1217,7 @@ footer {
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="/">Home</a>
       <span class="breadcrumb-sep">›</span>
-      <a href="/blog/">Blog</a>
-      <span class="breadcrumb-sep">›</span>
-      <span class="breadcrumb-current">{{POST_CATEGORY}}</span>
-      <span class="breadcrumb-sep">›</span>
-      <span class="breadcrumb-current" style="color:var(--muted2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:200px">{{POST_TITLE_SHORT}}</span>
+      <a href="/capcut-blog/">Blog</a>
     </nav>
   </div>
 </div>
@@ -1142,10 +1230,6 @@ footer {
   <div class="container">
     <div class="post-hero-content">
       <div class="post-meta-top">
-        <span class="post-category-badge">
-          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
-          {{POST_CATEGORY}}
-        </span>
         <span class="badge badge-new">New</span>
         <span class="badge badge-green">
           <svg width="8" height="8" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
@@ -1165,7 +1249,7 @@ footer {
         <div class="post-info-divider"></div>
         <div class="post-info-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          <span>{{POST_AUTHOR}}</span>
+          <span><a href="https://capcut-5zx.pages.dev/author-aarav">Aarav</a></span>
         </div>
         <div class="post-info-divider"></div>
         <div class="post-info-item">
@@ -1178,20 +1262,11 @@ footer {
           <span id="viewCount">{{POST_VIEWS}} views</span>
         </div>
         <div class="post-info-divider"></div>
-        <!-- <div class="post-info-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-          <span>{{POST_COMMENTS}} comments</span>
-        </div> -->
       </div>
-
       <!-- HERO THUMBNAIL -->
       <div class="post-hero-thumb">
         <!-- Replace src with actual post image -->
         <!-- <img src="images/{{POST_SLUG}}-hero.jpg" alt="{{POST_TITLE}}" loading="eager"> -->
-        <!-- <div class="post-hero-thumb-placeholder">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-          <span>Featured Image — {{POST_TITLE_SHORT}}</span>
-        </div> -->
       </div>
     </div>
   </div>
@@ -1340,14 +1415,13 @@ footer {
           <!-- ── MID-POST DOWNLOAD CTA ── -->
           <div class="post-download-cta">
             <div class="post-download-cta-icon">
-              <img src="CapCut-Mod-Apk.svg" alt="CapCut Mod Apk" loading="eager">
-              <!-- <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> -->
+              <img src="CapCut-Mod-Apk.svg" alt="CapCut Mod Apk Official Logo">
             </div>
             <div class="post-download-cta-body">
-              <h3>Download CapCut Mod APK v18.5.2</h3>
+              <h3>Download CapCut Mod APK</h3>
               <p>No watermark · 4K export · All effects unlocked · 100% free for Indian creators</p>
             </div>
-            <a href="/#download" class="btn-primary">
+            <a href="/" class="btn-primary">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
               Get Free APK
             </a>
@@ -1359,12 +1433,9 @@ footer {
           <p>{{SECTION_3_PARA_2}}</p>
 
           <!-- IMAGE PLACEHOLDER -->
-          <!-- <figure style="margin:24px 0">
+          <figure style="margin:24px 0">
             <div style="aspect-ratio:16/9;background:linear-gradient(135deg,#0c1826,#060d18);border-radius:var(--radius);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;color:var(--muted2);font-size:13px">
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.35"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-              <span>Screenshot: {{SECTION_3_IMG_CAPTION}}</span> -->
             </div>
-            <figcaption style="font-size:12px;color:var(--muted2);text-align:center;margin-top:8px">{{SECTION_3_IMG_CAPTION}}</figcaption>
           </figure>
 
           <!-- COMPARISON TABLE -->
@@ -1483,45 +1554,13 @@ footer {
 
         </article>
         <!-- END ARTICLE BODY -->
-
-        <!-- TAGS -->
-        <!-- <div class="post-tags"> -->
-          <!-- <a href="/blog/tag/capcut-mod/" class="post-tag">capcut mod</a>
-          <a href="/blog/tag/android/" class="post-tag">android</a>
-          <a href="/blog/tag/india/" class="post-tag">india</a>
-          <a href="/blog/tag/reels/" class="post-tag">reels</a>
-          <a href="/blog/tag/no-watermark/" class="post-tag">no watermark</a> -->
-        <!-- </div> -->
-
-        <!-- SHARE BAR -->
-        <!-- <div class="post-share">
-          <span class="post-share-label">Share</span>
-          <a href="https://wa.me/?text={{POST_TITLE}}%20https://capcutmodindia.in/blog/{{POST_SLUG}}/" target="_blank" rel="noopener" class="share-btn">
-            <svg viewBox="0 0 24 24" fill="currentColor" style="color:#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            WhatsApp
-          </a>
-          <a href="https://twitter.com/intent/tweet?text={{POST_TITLE}}&url=https://capcutmodindia.in/blog/{{POST_SLUG}}/" target="_blank" rel="noopener" class="share-btn">
-            <svg viewBox="0 0 24 24" fill="currentColor" style="color:#1DA1F2"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
-            Twitter
-          </a>
-          <a href="https://www.facebook.com/sharer/sharer.php?u=https://capcutmodindia.in/blog/{{POST_SLUG}}/" target="_blank" rel="noopener" class="share-btn">
-            <svg viewBox="0 0 24 24" fill="currentColor" style="color:#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-            Facebook
-          </a>
-          <button class="share-btn share-btn-copy" onclick="copyLink()">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
-            Copy Link
-          </button>
-          <span class="share-copy-toast" id="copyToast">✓ Copied!</span>
-        </div> -->
-
         <!-- AUTHOR BOX -->
         <div class="post-author-box">
-          <div class="post-author-avatar"><img src="aarav-capcut-mod-apk-author.jpg" alt="Aarav Capcut Mod Apk Author"></div>
+          <div class="post-author-avatar"><img class="authimg"src="aarav-capcut-mod-apk-author.jpg" alt="Aarav - Capcut Mod Apk Author"></div>
           <div class="post-author-info">
-            <div class="post-author-name">Aarav</div>
-            <div class="post-author-role">Founder · CapCut Mod India</div>
-            <p class="post-author-bio">I'm the founder of CapCut Mod APK, we dedicated to providing safe, updated, and feature-rich CapCut Pro APK versions for users worldwide. We focuses on delivering malware-free capcut with premium features unlocked, no watermark, and a smooth editing experience for creators.</p>
+            <div class="post-author-name"><a href="https://capcut-5zx.pages.dev/author-aarav">Aarav</a></div>
+            <div class="post-author-role">Founder · Free CapCut Mod Apk</div>
+            <p class="post-author-bio">I'm the founder of Free CapCut Mod APK, we dedicated to providing safe, updated, and feature-rich CapCut Pro APK versions for users worldwide. We focuses on delivering malware-free capcut with premium features unlocked, no watermark, and a smooth editing experience for creators.</p>
           </div>
         </div>
 
@@ -1552,12 +1591,11 @@ footer {
         <!-- DOWNLOAD CTA -->
         <div class="sidebar-download">
           <div class="sidebar-download-icon">
-            <!-- <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> -->
-            <img src="CapCut-Mod-Apk.svg" alt="CaptCut Mod Apk" lading="eager">
+            <img src="CapCut-Mod-Apk.svg" alt="CapCut Mod Apk Official Logo">
           </div>
-          <h3>CapCut Mod APK v18.5.2</h3>
+          <h3>CapCut Mod APK</h3>
           <p>No watermark · 4K export · All premium effects · Free forever</p>
-          <a href="/#download" class="btn-primary">
+          <a href="/" class="btn-primary">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Free Download
           </a>
@@ -1567,186 +1605,12 @@ footer {
             <span>✓ Android 8+</span>
           </div>
         </div>
-
-        <!-- RELATED POSTS -->
-        <!-- <div class="sidebar-related">
-          <div class="sidebar-related-title">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/></svg>
-            Related Posts
-          </div>
-          <a href="/blog/capcut-mod-no-watermark/" class="related-post-item">
-            <div class="related-post-thumb">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-            </div>
-            <div class="related-post-info">
-              <div class="related-post-cat">Guide</div>
-              <div class="related-post-title">How to Export Videos Without Watermark in CapCut Mod</div>
-            </div>
-          </a>
-          <a href="/blog/capcut-4k-export-guide/" class="related-post-item">
-            <div class="related-post-thumb">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-            </div>
-            <div class="related-post-info">
-              <div class="related-post-cat">Tutorial</div>
-              <div class="related-post-title">4K 60FPS Export Settings for Reels & Shorts</div>
-            </div>
-          </a>
-          <a href="/blog/capcut-vs-kinemaster/" class="related-post-item">
-            <div class="related-post-thumb">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-            </div>
-            <div class="related-post-info">
-              <div class="related-post-cat">Comparison</div>
-              <div class="related-post-title">CapCut Mod vs KineMaster Pro — Which is Better in 2025?</div>
-            </div>
-          </a>
-        </div> -->
-
-        <!-- NEWSLETTER -->
-        <!-- <div class="sidebar-newsletter">
-          <h3>Stay Updated 🔔</h3>
-          <p>Get notified when we release new guides, APK updates, and editing tips for Indian creators.</p>
-          <div class="sidebar-newsletter-form">
-            <input type="email" class="sidebar-newsletter-input" placeholder="your@email.com" aria-label="Email address">
-            <button class="sidebar-newsletter-btn">Subscribe Free</button>
-          </div>
-        </div>
-
-      </aside> -->
+      </aside>
       <!-- END SIDEBAR -->
 
     </div>
   </div>
 </main>
-
-<!-- ═══════════════════════════════════════════
-     RELATED POSTS (bottom grid)
-═══════════════════════════════════════════ -->
-<section class="related-section">
-  <div class="container">
-    <div class="related-section-head">
-      <h2 class="related-section-title">More <span class="cyan">Articles</span> for You</h2>
-      <a href="/blog/" class="btn-secondary">
-        View All Posts
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-      </a>
-    </div>
-    <div class="related-grid">
-      <!-- CARD 1 -->
-      <article class="related-card">
-        <div class="related-card-img">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-        </div>
-        <div class="related-card-body">
-          <div class="related-card-meta">
-            <span class="related-card-cat">Guide</span>
-            <span class="related-card-date">May 10, 2025</span>
-          </div>
-          <h3 class="related-card-title">How to Remove Watermark From CapCut Videos on Android</h3>
-          <p class="related-card-excerpt">Step-by-step guide to exporting clean, watermark-free videos using CapCut Mod APK on any Android phone.</p>
-          <a href="/blog/capcut-mod-no-watermark/" class="related-card-read-more">
-            Read More
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-          </a>
-        </div>
-      </article>
-      <!-- CARD 2 -->
-      <article class="related-card">
-        <div class="related-card-img">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-        </div>
-        <div class="related-card-body">
-          <div class="related-card-meta">
-            <span class="related-card-cat">Tips</span>
-            <span class="related-card-date">May 5, 2025</span>
-          </div>
-          <h3 class="related-card-title">10 Best CapCut Templates for Indian Reels Creators in 2025</h3>
-          <p class="related-card-excerpt">Trending templates for Bollywood beats, cricket celebrations, and daily vlog content optimized for Instagram Reels.</p>
-          <a href="/blog/capcut-templates-india-2025/" class="related-card-read-more">
-            Read More
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-          </a>
-        </div>
-      </article>
-      <!-- CARD 3 -->
-      <article class="related-card">
-        <div class="related-card-img">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-        </div>
-        <div class="related-card-body">
-          <div class="related-card-meta">
-            <span class="related-card-cat">Comparison</span>
-            <span class="related-card-date">Apr 28, 2025</span>
-          </div>
-          <h3 class="related-card-title">CapCut Mod APK vs Official CapCut — Full Comparison 2025</h3>
-          <p class="related-card-excerpt">Side-by-side breakdown of every feature difference between the free Mod APK and the official paid subscription.</p>
-          <a href="/blog/capcut-mod-vs-official/" class="related-card-read-more">
-            Read More
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-          </a>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════
-     FOOTER
-═══════════════════════════════════════════ -->
-<!-- <footer id="footer">
-  <div class="container">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <div class="footer-logo">
-          <div class="footer-logo-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-          <span class="footer-logo-text">CAPCUT<span style="color:var(--cyan)">MOD</span></span>
-        </div>
-        <p class="footer-tagline">India's most trusted source for CapCut Mod APK. Updated, verified, and built for Indian creators.</p>
-      </div>
-      <div>
-        <div class="footer-col-title">Quick Links</div>
-        <ul class="footer-links">
-          <li><a href="/">Home</a></li>
-          <li><a href="/blog/">Blog</a></li>
-          <li><a href="/#download">Download APK</a></li>
-          <li><a href="/#features">Features</a></li>
-          <li><a href="/#faq">FAQ</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="footer-col-title">Blog Categories</div>
-        <ul class="footer-links">
-          <li><a href="/blog/category/guides/">Guides</a></li>
-          <li><a href="/blog/category/tutorials/">Tutorials</a></li>
-          <li><a href="/blog/category/tips/">Tips & Tricks</a></li>
-          <li><a href="/blog/category/comparisons/">Comparisons</a></li>
-          <li><a href="/blog/category/updates/">APK Updates</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="footer-col-title">Legal</div>
-        <ul class="footer-links">
-          <li><a href="/privacy-policy/">Privacy Policy</a></li>
-          <li><a href="/terms-of-service/">Terms of Service</a></li>
-          <li><a href="/disclaimer/">Disclaimer</a></li>
-          <li><a href="/dmca/">DMCA</a></li>
-          <li><a href="/contact/">Contact Us</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2025 CapCut Mod India. For educational purposes only.</span>
-      <div class="footer-bottom-links">
-        <a href="/privacy-policy/">Privacy</a>
-        <a href="/terms-of-service/">Terms</a>
-        <a href="/disclaimer/">Disclaimer</a>
-        <a href="/sitemap.xml">Sitemap</a>
-      </div>
-    </div>
-  </div>
-</footer> -->
-
 <!-- ══════════════════════════════════════
      FOOTER
 ══════════════════════════════════════ -->
@@ -1759,58 +1623,47 @@ footer {
             <!-- <svg viewBox="0 0 24 24" style="width:17px;height:17px" fill="#fff"><path d="M15 10l-9 5V5l9 5zm0 0l4-4v8l-4-4z"/></svg> -->
             <img src="CapCut-Mod-Apk.svg" alt="CapCut Mod Apk Official Logo">
           </div>
-          <span style="font-family:var(--font-display);font-size:30px">CapCut <span class="cyan">MOD India</span></span>
+          <span style="font-family:var(--font-display);font-size:30px">CapCut <span class="cyan">MOD Apk</span></span>
         </div>
         <p class="footer-desc">India's most trusted source for CapCut Mod APK downloads. Every release is verified, scanned, and tested on Indian devices before publishing. Updated within 48 hours of new official versions.</p>
         <div class="footer-social" aria-label="Social media links">
+          <a href="https://www.facebook.com/capcutmodapk" class="footer-social-link" aria-label="facebook profile">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/></svg>
+          </a>
+          <a href="https://www.instagram.com/freecapcutmodapk/" class="footer-social-link" aria-label="Instagram profile">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
           <a href="#" class="footer-social-link" aria-label="YouTube channel">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.41 19.1C5.12 19.56 12 19.56 12 19.56s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95 29 29 0 00.46-5.34 29 29 0 00-.46-5.33z"/><polygon points="9.75,15.02 15.5,11.75 9.75,8.48 9.75,15.02" fill="#000"/></svg>
           </a>
-          <a href="#" class="footer-social-link" aria-label="Instagram profile">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-          </a>
-          <a href="#" class="footer-social-link" aria-label="Telegram channel">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.96 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+          <a href="https://www.threads.com/@freecapcutmodapk" class="footer-social-link" aria-label="Threads Profile">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-threads" viewBox="0 0 16 16">
+            <path d="M6.321 6.016c-.27-.18-1.166-.802-1.166-.802.756-1.081 1.753-1.502 3.132-1.502.975 0 1.803.327 2.394.948s.928 1.509 1.005 2.644q.492.207.905.484c1.109.745 1.719 1.86 1.719 3.137 0 2.716-2.226 5.075-6.256 5.075C4.594 16 1 13.987 1 7.994 1 2.034 4.482 0 8.044 0 9.69 0 13.55.243 15 5.036l-1.36.353C12.516 1.974 10.163 1.43 8.006 1.43c-3.565 0-5.582 2.171-5.582 6.79 0 4.143 2.254 6.343 5.63 6.343 2.777 0 4.847-1.443 4.847-3.556 0-1.438-1.208-2.127-1.27-2.127-.236 1.234-.868 3.31-3.644 3.31-1.618 0-3.013-1.118-3.013-2.582 0-2.09 1.984-2.847 3.55-2.847.586 0 1.294.04 1.663.114 0-.637-.54-1.728-1.9-1.728-1.25 0-1.566.405-1.967.868ZM8.716 8.19c-2.04 0-2.304.87-2.304 1.416 0 .878 1.043 1.168 1.6 1.168 1.02 0 2.067-.282 2.232-2.423a6.2 6.2 0 0 0-1.528-.161"/></svg>
           </a>
         </div>
       </div>
-
       <div>
         <div class="footer-col-title">Quick Links</div>
         <nav class="footer-links" aria-label="Footer navigation">
-          <a href="#features">All Features</a>
-          <a href="#download">Download APK</a>
-          <a href="#install">Install Guide</a>
-          <a href="#india">India Zone</a>
-          <a href="#compare">App Comparison</a>
-          <a href="#faq">FAQ</a>
+          <a href="/">CapCut Mod Apk</a>
+          <a href="https://capcut-5zx.pages.dev/about-us">About Us</a>
+          <a href="https://capcut-5zx.pages.dev/for-desktop">For Desktop</a>
+          <a href="https://capcut-5zx.pages.dev/for-ios">For iOS</a>
+          <a href="https://capcut-5zx.pages.dev/capcut-blog">Blog</a>
         </nav>
       </div>
-
-      <div>
-        <div class="footer-col-title">APK Versions</div>
-        <nav class="footer-links" aria-label="APK version links">
-          <a href="#">CapCut v18.5.2 (Latest)</a>
-          <a href="#">CapCut v18.3.0</a>
-          <a href="#">CapCut v17.6.0</a>
-          <a href="#">CapCut v15.10.7 (Lite)</a>
-          <a href="#">All Old Versions</a>
-        </nav>
-      </div>
-
       <div>
         <div class="footer-col-title">Legal</div>
         <nav class="footer-links" aria-label="Legal links">
-          <a href="about-us">About Us</a>
-          <a href="contact-us">Contact Us</a>
-          <a href="privacy-policy">Privacy Policy</a>
-          <a href="terms-of-use">Terms of Use</a>
-          <a href="dmca-notice">DMCA Notice</a>
-          <a href="disclaimer">Disclaimer</a>
+          <a href="https://capcut-5zx.pages.dev/contact-us">Contact Us</a>
+          <a href="https://capcut-5zx.pages.dev/privacy-policy">Privacy Policy</a>
+          <a href="https://capcut-5zx.pages.dev/terms-of-use">Terms of Use</a>
+          <a href="https://capcut-5zx.pages.dev/dmca-notice">DMCA Notice</a>
+          <a href="https://capcut-5zx.pages.dev/disclaimer">Disclaimer</a>
         </nav>
       </div>
     </div>
-
     <div class="footer-bottom">
       <p class="footer-disclaimer">
         <strong>Disclaimer &amp; DMCA:</strong> This website is not affiliated with, endorsed by, or connected to ByteDance Pte. Ltd. or the official CapCut application. "CapCut" is a trademark of ByteDance. All APK files hosted here are shared strictly for personal and educational use. If you are a copyright holder and believe any content on this page infringes your rights, please submit a formal DMCA takedown notice to our contact address and we will act promptly. Downloading APK files is not illegal under Indian law; however, use of modified software may violate the original developer's Terms of Service. By downloading, you agree that you are doing so at your own risk and responsibility.
@@ -1818,19 +1671,16 @@ footer {
        <!-- <p class="footer-copy">© 2025 CapCutModIndia.in<br>Made with ❤️ for 🇮🇳 Creators</p> -->
     </div>
     <div class="footer-bottom">
-      <!-- <p class="footer-disclaimer">
-        <strong>Disclaimer &amp; DMCA:</strong> This website is not affiliated with, endorsed by, or connected to ByteDance Pte. Ltd. or the official CapCut application. "CapCut" is a trademark of ByteDance. All APK files hosted here are shared strictly for personal and educational use. If you are a copyright holder and believe any content on this page infringes your rights, please submit a formal DMCA takedown notice to our contact address and we will act promptly. Downloading APK files is not illegal under Indian law; however, use of modified software may violate the original developer's Terms of Service. By downloading, you agree that you are doing so at your own risk and responsibility.
-      </p> -->
-      <p class="footer-copy">Copyright © 2026 CapCutModIndia.in. <br>Made with ❤️ for 🇮🇳 Creators</p>
+      <p class="footer-copy">Copyright © 2026 freecapcut.com. <br>Made with ❤️ for 🇮🇳 Creators</p>
     </div>
   </div>
 </footer>
 
 <!-- Mobile Sticky Download -->
 <div class="mobile-sticky" role="complementary" aria-label="Mobile download button">
-  <a href="#download" class="btn-primary" style="width:100%;justify-content:center;font-size:15px;padding:14px" aria-label="Download CapCut Mod APK free">
+  <a href="/" class="btn-primary" style="width:100%;justify-content:center;font-size:15px;padding:14px" aria-label="Download CapCut Mod APK free">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-    Download Free APK — v18.5.2
+    Download Free APK
   </a>
 </div>
 
@@ -1852,32 +1702,37 @@ footer {
      SCRIPTS
 ═══════════════════════════════════════════ -->
 <script>
-/* ── NAV ── */
-const navEl = document.getElementById('nav');
-window.addEventListener('scroll', () => {
-  navEl.classList.toggle('scrolled', window.scrollY > 40);
-}, { passive: true });
+/* Nav scroll */
+window.addEventListener('scroll', function() {
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 50);
+});
 
-function openNav() {
-  document.getElementById('navMobile').classList.add('open');
-  document.getElementById('navOverlay').classList.add('open');
-  document.getElementById('navHamburger').classList.add('active');
-  document.getElementById('navHamburger').setAttribute('aria-expanded', 'true');
-  document.getElementById('navMobile').setAttribute('aria-hidden', 'false');
-  document.body.style.overflow = 'hidden';
+/* Mobile menu */
+function toggleMenu() {
+  const m = document.getElementById('mobileMenu');
+  const overlay = document.getElementById('menuOverlay');
+  const btn = document.getElementById('navHamburger');
+  const isOpen = m.classList.contains('open');
+  if (isOpen) {
+    closeMenu();
+  } else {
+    m.classList.add('open');
+    overlay.classList.add('open');
+    btn.classList.add('active');
+    btn.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
 }
-function closeNav() {
-  document.getElementById('navMobile').classList.remove('open');
-  document.getElementById('navOverlay').classList.remove('open');
-  document.getElementById('navHamburger').classList.remove('active');
-  document.getElementById('navHamburger').setAttribute('aria-expanded', 'false');
-  document.getElementById('navMobile').setAttribute('aria-hidden', 'true');
+function closeMenu() {
+  const m = document.getElementById('mobileMenu');
+  const overlay = document.getElementById('menuOverlay');
+  const btn = document.getElementById('navHamburger');
+  m.classList.remove('open');
+  overlay.classList.remove('open');
+  btn.classList.remove('active');
+  btn.setAttribute('aria-expanded', 'false');
   document.body.style.overflow = '';
 }
-document.getElementById('navHamburger').addEventListener('click', () => {
-  document.getElementById('navMobile').classList.contains('open') ? closeNav() : openNav();
-});
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeNav(); });
 
 /* ── READ PROGRESS BAR ── */
 (function () {
